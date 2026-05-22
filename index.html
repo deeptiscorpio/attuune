@@ -107,7 +107,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(14,17,23,0.95);backdrop-fi
 .pqtext em{font-style:italic;opacity:0.7;}
 .pqattr{font-size:13px;color:rgba(26,14,6,0.5);}
 
-.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:44px;max-width:680px;}
+.pgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:44px;}
 .pcard{background:var(--navy);border:1px solid var(--ivory-08);border-radius:16px;padding:34px 30px;}
 .pcard.hi{border:1.5px solid var(--teal-border);}
 .pbadge{display:inline-block;font-size:10px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:#085041;background:#9FE1CB;border-radius:4px;padding:5px 12px;margin-bottom:20px;}
@@ -147,7 +147,7 @@ footer{background:var(--night);padding:44px 48px;border-top:1px solid var(--ivor
   .truth+.truth{border-left:none;border-top:1px solid var(--ivory-08);}
   .sh{font-size:32px;}
   .wgrid{grid-template-columns:1fr;}
-  .pgrid{grid-template-columns:1fr;}
+  .pgrid{grid-template-columns:1fr;max-width:400px;margin-left:auto;margin-right:auto;}
   .pullq{padding:60px 24px;}
   .pqtext{font-size:24px;}
   footer{flex-direction:column;align-items:flex-start;padding:32px 24px;}
@@ -322,6 +322,21 @@ footer{background:var(--night);padding:44px 48px;border-top:1px solid var(--ivor
       </ul>
       <button class="pbtn pbtn-fill" id="pricing-btn-plus">Get early access</button>
     </div>
+    <div class="pcard" style="border:1px solid rgba(212,147,106,0.3);position:relative;">
+      <div class="pbadge" style="color:#633806;background:#FAC775;">For teams</div>
+      <div class="pname">Attuune Teams</div>
+      <div class="pprice" style="font-size:28px;padding-top:6px;">Let's talk</div>
+      <div class="pper">custom pricing · per seat</div>
+      <ul class="plist">
+        <li><span class="pcheck" style="color:var(--amber);">✓</span>Everything in Plus</li>
+        <li><span class="pcheck" style="color:var(--amber);">✓</span>Company-wide wellness dashboard</li>
+        <li><span class="pcheck" style="color:var(--amber);">✓</span>Anonymous team insights</li>
+        <li><span class="pcheck" style="color:var(--amber);">✓</span>Dedicated onboarding support</li>
+        <li><span class="pcheck" style="color:var(--amber);">✓</span>GDPR data processing agreement</li>
+        <li><span class="pcheck" style="color:var(--amber);">✓</span>Priority support</li>
+      </ul>
+      <button class="pbtn" id="pricing-btn-teams" style="background:transparent;color:var(--amber);border:1px solid rgba(212,147,106,0.4);margin-top:30px;padding:13px;border-radius:8px;font-size:14px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;width:100%;">Contact us</button>
+    </div>
   </div>
 </div>
 
@@ -379,6 +394,7 @@ document.getElementById('signup-btn-2').addEventListener('click', function() {
 
 document.getElementById('pricing-btn-free').addEventListener('click', openTally);
 document.getElementById('pricing-btn-plus').addEventListener('click', openTally);
+document.getElementById('pricing-btn-teams').addEventListener('click', openTally);
 
 document.getElementById('email-input').addEventListener('keypress', function(e) {
   if (e.key === 'Enter') handleSignup('email-input', 'success-msg-1');
