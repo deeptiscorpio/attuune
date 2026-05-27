@@ -34,7 +34,7 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: #050816;
+      background: #040816;
       overflow-x: hidden;
       color: white;
     }
@@ -66,8 +66,8 @@
     }
 
     .logo-ring {
-      width: 62px;
-      height: 62px;
+      width: 58px;
+      height: 58px;
       border-radius: 999px;
       position: relative;
       display: flex;
@@ -84,13 +84,13 @@
     }
 
     .logo-ring::before {
-      width: 62px;
-      height: 62px;
+      width: 58px;
+      height: 58px;
     }
 
     .logo-ring::after {
-      width: 42px;
-      height: 42px;
+      width: 38px;
+      height: 38px;
     }
 
     .logo-dot {
@@ -108,22 +108,39 @@
     }
 
     .phone {
-      width: 280px;
-      border-radius: 40px;
-      padding: 16px;
+      width: 240px;
+      border-radius: 38px;
+      padding: 14px;
       background: rgba(255,255,255,0.04);
       border: 1px solid rgba(255,255,255,0.08);
       backdrop-filter: blur(20px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.45);
     }
 
     .phone-inner {
-      min-height: 540px;
-      border-radius: 32px;
-      background: #0c1224;
-      padding: 24px;
+      min-height: 500px;
+      border-radius: 30px;
+      background: #0b1225;
+      padding: 22px;
       display: flex;
       flex-direction: column;
+    }
+
+    .phone-button {
+      background: white;
+      color: black;
+      border-radius: 18px;
+      padding: 14px;
+      font-weight: 600;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    .phone-card {
+      border-radius: 24px;
+      padding: 20px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.06);
     }
   </style>
 </head>
@@ -170,7 +187,7 @@
 
     <div class="glow bg-blue-500 w-[500px] h-[500px] bottom-[-100px] right-[-100px]"></div>
 
-    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center relative z-10">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative z-10">
 
       <!-- LEFT -->
       <div>
@@ -217,8 +234,8 @@
 
       </div>
 
-      <!-- RIGHT -->
-      <div class="relative flex justify-center">
+      <!-- HERO PHONE -->
+      <div class="flex justify-center">
 
         <div class="phone">
 
@@ -231,7 +248,7 @@
                   Tonight
                 </p>
 
-                <h3 class="text-3xl font-semibold mt-2">
+                <h3 class="text-2xl font-semibold mt-2 leading-tight">
                   Emotional Reset
                 </h3>
               </div>
@@ -244,7 +261,7 @@
 
             <div class="space-y-5">
 
-              <div class="glass rounded-3xl p-6">
+              <div class="phone-card">
                 <p class="text-sm text-gray-400 mb-3">
                   Reflection
                 </p>
@@ -254,21 +271,21 @@
                 </p>
               </div>
 
-              <div class="rounded-3xl p-6 bg-gradient-to-r from-[#182648] to-[#121b34]">
+              <div class="phone-card bg-gradient-to-r from-[#182648] to-[#121b34]">
                 <p class="text-sm text-gray-400 mb-3">
                   Guided Calm
                 </p>
 
-                <p class="text-xl leading-relaxed text-gray-100">
+                <p class="text-lg leading-relaxed text-gray-100">
                   Breathe slowly. Let your nervous system soften.
                 </p>
               </div>
 
             </div>
 
-            <button class="mt-auto bg-white text-black py-4 rounded-2xl text-lg font-semibold hover-scale">
+            <div class="phone-button">
               Start Your Reset
-            </button>
+            </div>
 
           </div>
 
@@ -295,21 +312,21 @@
 
     </div>
 
-    <div class="max-w-7xl mx-auto grid lg:grid-cols-3 gap-10 justify-items-center">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-center gap-8">
 
-      <!-- SCREEN 1 -->
+      <!-- PHONE 1 -->
       <div class="phone">
 
         <div class="phone-inner">
 
-          <div class="flex justify-between items-center mb-10">
+          <div class="flex justify-between items-center mb-8">
 
             <div>
               <p class="text-sm text-gray-400">
                 Good Evening
               </p>
 
-              <h3 class="text-3xl font-semibold mt-2">
+              <h3 class="text-2xl font-semibold mt-2 leading-tight">
                 How do you feel?
               </h3>
             </div>
@@ -322,98 +339,86 @@
 
           <div class="space-y-4">
 
-            <div class="glass rounded-2xl p-5 text-lg">
-              Mentally tired
-            </div>
+            <div class="phone-card">Mentally tired</div>
 
-            <div class="glass rounded-2xl p-5 text-lg">
-              Overthinking
-            </div>
+            <div class="phone-card">Overthinking</div>
 
-            <div class="glass rounded-2xl p-5 text-lg">
-              Emotionally heavy
-            </div>
+            <div class="phone-card">Emotionally heavy</div>
 
-            <div class="glass rounded-2xl p-5 text-lg">
-              Burned out
-            </div>
+            <div class="phone-card">Burned out</div>
 
           </div>
 
-          <button class="mt-auto bg-white text-black py-4 rounded-2xl text-lg font-semibold hover-scale">
+          <div class="phone-button">
             Continue
-          </button>
-
-        </div>
-
-      </div>
-
-      <!-- SCREEN 2 -->
-      <div class="phone lg:-mt-10">
-
-        <div class="phone-inner">
-
-          <div>
-
-            <div class="flex justify-between items-center mb-10">
-
-              <div>
-                <p class="text-sm text-gray-400">
-                  Tonight’s Session
-                </p>
-
-                <h3 class="text-3xl font-semibold mt-2">
-                  Emotional Reset
-                </h3>
-              </div>
-
-              <div class="logo-ring scale-75">
-                <div class="logo-dot"></div>
-              </div>
-
-            </div>
-
-            <div class="glass rounded-3xl p-6">
-
-              <div class="w-20 h-20 rounded-full bg-gradient-to-br from-cyan-300/30 to-blue-400/20 mx-auto"></div>
-
-              <h4 class="text-2xl text-center font-semibold mt-8 leading-tight">
-                Releasing Mental Overload
-              </h4>
-
-              <p class="text-center text-gray-400 mt-5 text-base leading-relaxed">
-                Slow breathing • Guided calm • Emotional decompression
-              </p>
-
-              <div class="mt-10 h-2 bg-white/10 rounded-full overflow-hidden">
-                <div class="w-1/2 h-full bg-cyan-300 rounded-full"></div>
-              </div>
-
-            </div>
-
           </div>
 
-          <button class="mt-8 bg-white text-black py-4 rounded-2xl text-lg font-semibold hover-scale">
-            Continue Session
-          </button>
-
         </div>
 
       </div>
 
-      <!-- SCREEN 3 -->
+      <!-- PHONE 2 -->
       <div class="phone">
 
         <div class="phone-inner">
 
-          <div class="flex justify-between items-center mb-10">
+          <div class="flex justify-between items-center mb-8">
+
+            <div>
+              <p class="text-sm text-gray-400">
+                Tonight’s Session
+              </p>
+
+              <h3 class="text-2xl font-semibold mt-2 leading-tight">
+                Emotional Reset
+              </h3>
+            </div>
+
+            <div class="logo-ring scale-75">
+              <div class="logo-dot"></div>
+            </div>
+
+          </div>
+
+          <div class="phone-card text-center">
+
+            <div class="w-20 h-20 rounded-full bg-gradient-to-br from-cyan-300/30 to-blue-400/20 mx-auto"></div>
+
+            <h4 class="text-xl font-semibold mt-8 leading-tight">
+              Releasing Mental Overload
+            </h4>
+
+            <p class="text-gray-400 mt-5 text-base leading-relaxed">
+              Slow breathing • Guided calm • Emotional decompression
+            </p>
+
+            <div class="mt-8 h-2 bg-white/10 rounded-full overflow-hidden">
+              <div class="w-1/2 h-full bg-cyan-300 rounded-full"></div>
+            </div>
+
+          </div>
+
+          <div class="phone-button mt-8">
+            Continue Session
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PHONE 3 -->
+      <div class="phone">
+
+        <div class="phone-inner">
+
+          <div class="flex justify-between items-center mb-8">
 
             <div>
               <p class="text-sm text-gray-400">
                 Your Space
               </p>
 
-              <h3 class="text-3xl font-semibold mt-2">
+              <h3 class="text-2xl font-semibold mt-2 leading-tight">
                 Emotional Clarity
               </h3>
             </div>
@@ -424,9 +429,9 @@
 
           </div>
 
-          <div class="bg-gradient-to-br from-[#182648] to-[#101827] rounded-3xl p-6">
+          <div class="phone-card bg-gradient-to-br from-[#182648] to-[#101827]">
 
-            <p class="text-2xl leading-relaxed">
+            <p class="text-xl leading-relaxed">
               “You are allowed to rest without earning it.”
             </p>
 
@@ -434,7 +439,7 @@
 
           <div class="grid grid-cols-2 gap-4 mt-6">
 
-            <div class="glass rounded-2xl p-5">
+            <div class="phone-card">
               <p class="text-sm text-gray-400">
                 Mood
               </p>
@@ -444,7 +449,7 @@
               </p>
             </div>
 
-            <div class="glass rounded-2xl p-5">
+            <div class="phone-card">
               <p class="text-sm text-gray-400">
                 Energy
               </p>
@@ -456,9 +461,9 @@
 
           </div>
 
-          <button class="mt-auto bg-white text-black py-4 rounded-2xl text-lg font-semibold hover-scale">
+          <div class="phone-button">
             Start Reflection
-          </button>
+          </div>
 
         </div>
 
