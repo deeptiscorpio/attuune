@@ -1,782 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- ===================================================== -->
+<!-- ================= MOBILE PREVIEW ==================== -->
+<!-- ===================================================== -->
 
-<head>
+<section
+  id="preview"
+  class="px-6 py-28 overflow-hidden"
+>
 
-  <!-- ===================================================== -->
-  <!-- ================= BASIC META ======================== -->
-  <!-- ===================================================== -->
+  <div class="max-w-7xl mx-auto text-center mb-20">
 
-  <meta charset="UTF-8" />
+    <p class="uppercase tracking-[0.3em] text-cyan-300 text-sm mb-5">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+      Mobile experience
 
-  <title>
-    Attuune — Emotional Wellness
-  </title>
+    </p>
 
-  <meta
-    name="description"
-    content="Attuune is a calm emotional wellness platform designed for emotional reset, emotional clarity, self reflection, and mental softness in a loud world."
-  />
+    <h2 class="section-heading max-w-5xl mx-auto">
 
-  <meta
-    name="keywords"
-    content="emotional wellness, mindfulness app, mental wellness, emotional reset, self reflection, emotional clarity"
-  />
+      Designed like emotional quiet in your pocket.
 
-  <meta
-    property="og:title"
-    content="Attuune — Emotional Wellness"
-  />
+    </h2>
 
-  <meta
-    property="og:description"
-    content="A calmer digital space for emotional reset and emotional clarity."
-  />
+  </div>
 
-  <meta
-    property="og:type"
-    content="website"
-  />
+  <!-- ================= SCROLL ================= -->
 
-  <meta
-    property="og:image"
-    content="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1200"
-  />
+  <div class="preview-scroll w-full overflow-x-auto py-10">
 
-  <!-- ===================================================== -->
-  <!-- ===================== FAVICON ======================= -->
-  <!-- ===================================================== -->
+    <div class="flex gap-12 px-10 w-max mx-auto items-start">
 
-  <link
-    rel="icon"
-    href="https://cdn-icons-png.flaticon.com/512/1828/1828884.png"
-  />
+      <!-- ===================================================== -->
+      <!-- ================= SCREEN 1 ========================== -->
+      <!-- ===================================================== -->
 
-  <!-- ===================================================== -->
-  <!-- ===================== FONTS ========================= -->
-  <!-- ===================================================== -->
+      <div class="phone">
 
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
-  />
+        <div class="phone-inner">
 
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  />
+          <div>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+            <!-- ================= HEADER ================= -->
 
-  <!-- ===================================================== -->
-  <!-- ==================== TAILWIND ======================= -->
-  <!-- ===================================================== -->
-
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- ===================================================== -->
-  <!-- ====================== STYLES ======================= -->
-  <!-- ===================================================== -->
-
-  <style>
-
-    /* ===================================================== */
-    /* ===================== GLOBAL ========================= */
-    /* ===================================================== */
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-
-      margin: 0;
-
-      overflow-x: hidden;
-
-      background: #030712;
-
-      color: white;
-
-      font-family: 'Inter', sans-serif;
-
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    img {
-
-      display: block;
-
-      max-width: 100%;
-
-    }
-
-    /* ===================================================== */
-    /* ===================== GLASS ========================== */
-    /* ===================================================== */
-
-    .glass {
-
-      background: rgba(255,255,255,0.05);
-
-      border: 1px solid rgba(255,255,255,0.08);
-
-      backdrop-filter: blur(20px);
-
-    }
-
-    /* ===================================================== */
-    /* ===================== HOVER ========================== */
-    /* ===================================================== */
-
-    .hover-scale {
-
-      transition: all .3s ease;
-
-    }
-
-    .hover-scale:hover {
-
-      transform: scale(1.03);
-
-    }
-
-    /* ===================================================== */
-    /* ================= GRADIENT TEXT ===================== */
-    /* ===================================================== */
-
-    .gradient-text {
-
-      background: linear-gradient(
-        to right,
-        #ffffff,
-        #79f2df,
-        #b8c5ff
-      );
-
-      -webkit-background-clip: text;
-
-      -webkit-text-fill-color: transparent;
-
-    }
-
-    /* ===================================================== */
-    /* ===================== GLOW =========================== */
-    /* ===================================================== */
-
-    .glow {
-
-      position: absolute;
-
-      border-radius: 9999px;
-
-      filter: blur(120px);
-
-      opacity: .22;
-
-      z-index: 0;
-
-    }
-
-    /* ===================================================== */
-    /* ===================== LOGO =========================== */
-    /* ===================================================== */
-
-    .logo-ring {
-
-      width: 58px;
-
-      height: 58px;
-
-      border-radius: 999px;
-
-      position: relative;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      flex-shrink: 0;
-
-    }
-
-    .logo-ring::before,
-    .logo-ring::after {
-
-      content: "";
-
-      position: absolute;
-
-      border-radius: 999px;
-
-      border: 2px solid rgba(120,255,255,.5);
-
-    }
-
-    .logo-ring::before {
-
-      width: 58px;
-
-      height: 58px;
-
-    }
-
-    .logo-ring::after {
-
-      width: 38px;
-
-      height: 38px;
-
-    }
-
-    .logo-dot {
-
-      width: 10px;
-
-      height: 10px;
-
-      border-radius: 999px;
-
-      background: #7eedd6;
-
-      box-shadow: 0 0 20px #7eedd6;
-
-    }
-
-    /* ===================================================== */
-    /* ================= HERO GRID ========================== */
-    /* ===================================================== */
-
-    .hero-grid {
-
-      display: grid;
-
-      grid-template-columns: 1.1fr .9fr;
-
-      gap: 60px;
-
-      align-items: center;
-
-    }
-
-    /* ===================================================== */
-    /* ================= HERO HEADING ====================== */
-    /* ===================================================== */
-
-    .hero-heading {
-
-      font-size: 72px;
-
-      line-height: .95;
-
-      font-weight: 800;
-
-      letter-spacing: -3px;
-
-      max-width: 650px;
-
-    }
-
-    /* ===================================================== */
-    /* ================= SECTION HEADING =================== */
-    /* ===================================================== */
-
-    .section-heading {
-
-      font-size: 62px;
-
-      line-height: 1;
-
-      font-weight: 800;
-
-      letter-spacing: -2px;
-
-    }
-
-    /* ===================================================== */
-    /* ==================== PHONE =========================== */
-    /* ===================================================== */
-
-    .phone {
-
-      width: 360px;
-
-      min-height: 680px;
-
-      border-radius: 42px;
-
-      padding: 16px;
-
-      background: rgba(255,255,255,0.04);
-
-      border: 1px solid rgba(255,255,255,0.08);
-
-      backdrop-filter: blur(20px);
-
-      box-shadow: 0 20px 60px rgba(0,0,0,0.45);
-
-      flex-shrink: 0;
-
-    }
-
-    /* ===================================================== */
-    /* ================= PHONE INNER ======================= */
-    /* ===================================================== */
-
-    .phone-inner {
-
-      min-height: 646px;
-
-      border-radius: 34px;
-
-      background: #0b1225;
-
-      padding: 32px;
-
-      display: flex;
-
-      flex-direction: column;
-
-      justify-content: space-between;
-
-    }
-
-    /* ===================================================== */
-    /* ================= PHONE CARD ======================== */
-    /* ===================================================== */
-
-    .phone-card {
-
-      border-radius: 24px;
-
-      padding: 22px;
-
-      background: rgba(255,255,255,0.05);
-
-      border: 1px solid rgba(255,255,255,0.06);
-
-    }
-
-    /* ===================================================== */
-    /* ================= PHONE BUTTON ====================== */
-    /* ===================================================== */
-
-    .phone-button {
-
-      background: white;
-
-      color: black;
-
-      border-radius: 18px;
-
-      padding: 18px;
-
-      text-align: center;
-
-      font-weight: 600;
-
-      margin-top: auto;
-
-      font-size: 20px;
-
-    }
-
-    /* ===================================================== */
-    /* ================= FEATURE CARD ====================== */
-    /* ===================================================== */
-
-    .feature-card {
-
-      border-radius: 30px;
-
-      padding: 40px;
-
-      background: rgba(255,255,255,0.04);
-
-      border: 1px solid rgba(255,255,255,0.08);
-
-      transition: all .3s ease;
-
-    }
-
-    .feature-card:hover {
-
-      transform: translateY(-6px);
-
-      border-color: rgba(126,237,214,.35);
-
-    }
-
-    /* ===================================================== */
-    /* ================= PREVIEW SCROLL ==================== */
-    /* ===================================================== */
-
-    .preview-scroll {
-
-      overflow-x: auto;
-
-      padding-bottom: 20px;
-
-    }
-
-    .preview-scroll::-webkit-scrollbar {
-
-      height: 6px;
-
-    }
-
-    .preview-scroll::-webkit-scrollbar-thumb {
-
-      background: rgba(255,255,255,.2);
-
-      border-radius: 999px;
-
-    }
-
-    /* ===================================================== */
-    /* ================= ANIMATION ========================= */
-    /* ===================================================== */
-
-    .fade-up {
-
-      animation: fadeUp 1s ease forwards;
-
-    }
-
-    @keyframes fadeUp {
-
-      from {
-
-        opacity: 0;
-
-        transform: translateY(30px);
-
-      }
-
-      to {
-
-        opacity: 1;
-
-        transform: translateY(0px);
-
-      }
-
-    }
-
-    /* ===================================================== */
-    /* ================= RESPONSIVE ======================== */
-    /* ===================================================== */
-
-    @media(max-width:1100px) {
-
-      .hero-grid {
-
-        grid-template-columns: 1fr;
-
-      }
-
-      .hero-left {
-
-        text-align: center;
-
-      }
-
-      .hero-buttons {
-
-        justify-content: center;
-
-      }
-
-      .hero-features {
-
-        justify-content: center;
-
-      }
-
-      .hero-heading {
-
-        margin-inline: auto;
-
-      }
-
-      .hero-phone {
-
-        margin-top: 20px;
-
-      }
-
-    }
-
-    @media(max-width:700px) {
-
-      .hero-heading {
-
-        font-size: 52px;
-
-        line-height: .98;
-
-      }
-
-      .section-heading {
-
-        font-size: 42px;
-
-      }
-
-      .phone {
-
-        width: 310px;
-
-      }
-
-      .phone-inner {
-
-        padding: 24px;
-
-      }
-
-    }
-
-  </style>
-
-</head>
-
-<body>
-
-  <!-- ===================================================== -->
-  <!-- ==================== NAVBAR ========================= -->
-  <!-- ===================================================== -->
-
-  <nav class="fixed top-0 left-0 w-full z-50 glass">
-
-    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-
-      <!-- ================= LOGO ================= -->
-
-      <div class="flex items-center gap-4">
-
-        <div class="logo-ring">
-          <div class="logo-dot"></div>
-        </div>
-
-        <div>
-
-          <h1 class="text-2xl font-semibold gradient-text">
-            attuune
-          </h1>
-
-          <p class="text-sm text-gray-400">
-            emotional wellness
-          </p>
-
-        </div>
-
-      </div>
-
-      <!-- ================= BUTTON ================= -->
-
-      <a
-        href="https://tally.so/r/kdkNDo"
-        target="_blank"
-        class="bg-white text-black px-6 py-3 rounded-2xl font-semibold hover-scale"
-      >
-        Join Waitlist
-      </a>
-
-    </div>
-
-  </nav>
-
-  <!-- ===================================================== -->
-  <!-- ==================== HERO =========================== -->
-  <!-- ===================================================== -->
-
-  <section class="relative min-h-screen flex items-center px-6 pt-36 overflow-hidden">
-
-    <!-- ================= GLOWS ================= -->
-
-    <div class="glow bg-cyan-400 w-[500px] h-[500px] top-[-120px] left-[-120px]"></div>
-
-    <div class="glow bg-blue-500 w-[500px] h-[500px] bottom-[-120px] right-[-120px]"></div>
-
-    <div class="max-w-7xl mx-auto relative z-10 w-full">
-
-      <div class="hero-grid">
-
-        <!-- ===================================================== -->
-        <!-- ================= HERO LEFT ========================= -->
-        <!-- ===================================================== -->
-
-        <div class="hero-left fade-up">
-
-          <div class="inline-flex px-5 py-2 rounded-full glass text-sm text-gray-300 mb-8">
-
-            Emotional wellness for modern life
-
-          </div>
-
-          <h1 class="hero-heading">
-
-            The world got
-
-            <span class="gradient-text block">
-              louder.
-            </span>
-
-            Your mind didn’t.
-
-          </h1>
-
-          <p class="mt-10 text-xl text-gray-300 leading-relaxed max-w-2xl">
-
-            A calm digital space to emotionally reset,
-            clear your thoughts,
-            and feel mentally lighter —
-            without pressure,
-            noise,
-            or emotional overwhelm.
-
-          </p>
-
-          <!-- ================= BUTTONS ================= -->
-
-          <div class="flex flex-wrap gap-5 mt-12 hero-buttons">
-
-            <a
-              href="https://tally.so/r/kdkNDo"
-              target="_blank"
-              class="bg-white text-black px-8 py-4 rounded-2xl font-semibold hover-scale"
-            >
-              Join Early Access
-            </a>
-
-            <a
-              href="#preview"
-              class="glass px-8 py-4 rounded-2xl hover-scale"
-            >
-              Watch Preview
-            </a>
-
-          </div>
-
-          <!-- ================= FEATURES ================= -->
-
-          <div class="flex flex-wrap gap-8 mt-12 text-gray-400 text-sm hero-features">
-
-            <div>
-              ✓ Emotionally safe
-            </div>
-
-            <div>
-              ✓ No toxic positivity
-            </div>
-
-            <div>
-              ✓ Designed for real life
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- ===================================================== -->
-        <!-- ================= HERO PHONE ======================== -->
-        <!-- ===================================================== -->
-
-        <div class="flex justify-center hero-phone fade-up">
-
-          <div class="phone scale-[0.92] origin-center">
-
-            <div class="phone-inner">
+            <div class="flex justify-between items-start mb-10">
 
               <div>
 
-                <!-- ================= TOP ================= -->
+                <p class="text-sm text-gray-400">
 
-                <div class="flex justify-between items-center mb-10">
+                  Good Evening
 
-                  <div>
+                </p>
 
-                    <p class="text-sm text-gray-400">
-                      Tonight
-                    </p>
+                <h3 class="text-[60px] font-semibold mt-2 leading-[0.92] tracking-[-2px]">
 
-                    <h3 class="text-[54px] font-semibold mt-2 leading-[0.95]">
+                  How do you feel?
 
-                      Emotional Reset
-
-                    </h3>
-
-                  </div>
-
-                  <div class="logo-ring scale-75">
-                    <div class="logo-dot"></div>
-                  </div>
-
-                </div>
-
-                <!-- ================= CONTENT ================= -->
-
-                <div class="space-y-5">
-
-                  <div class="phone-card">
-
-                    <p class="text-sm text-gray-400 mb-3">
-                      Reflection
-                    </p>
-
-                    <p class="text-2xl leading-relaxed text-gray-100">
-
-                      “You don’t need to solve everything tonight.”
-
-                    </p>
-
-                  </div>
-
-                  <div class="phone-card bg-gradient-to-r from-[#182648] to-[#121b34]">
-
-                    <p class="text-sm text-gray-400 mb-3">
-                      Guided Calm
-                    </p>
-
-                    <p class="text-xl leading-relaxed text-gray-100">
-
-                      Breathe slowly.
-                      Let your nervous system soften.
-
-                    </p>
-
-                  </div>
-
-                </div>
+                </h3>
 
               </div>
 
-              <div class="phone-button">
+              <div class="logo-ring scale-75 mt-2">
 
-                Start Your Reset
+                <div class="logo-dot"></div>
 
               </div>
 
             </div>
+
+            <!-- ================= OPTIONS ================= -->
+
+            <div class="space-y-5">
+
+              <div class="phone-card text-[22px]">
+
+                Mentally tired
+
+              </div>
+
+              <div class="phone-card text-[22px]">
+
+                Overthinking
+
+              </div>
+
+              <div class="phone-card text-[22px]">
+
+                Emotionally heavy
+
+              </div>
+
+              <div class="phone-card text-[22px]">
+
+                Burned out
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- ================= BUTTON ================= -->
+
+          <div class="phone-button mt-10">
+
+            Continue
 
           </div>
 
@@ -784,268 +111,185 @@
 
       </div>
 
-    </div>
+      <!-- ===================================================== -->
+      <!-- ================= SCREEN 2 ========================== -->
+      <!-- ===================================================== -->
 
-  </section>
+      <div class="phone">
 
-  <!-- ===================================================== -->
-  <!-- ================= MOBILE PREVIEW ==================== -->
-  <!-- ===================================================== -->
+        <div class="phone-inner">
 
-  <section
-    id="preview"
-    class="px-6 py-28 overflow-hidden"
-  >
+          <div>
 
-    <div class="max-w-7xl mx-auto text-center mb-20">
+            <!-- ================= HEADER ================= -->
 
-      <p class="uppercase tracking-[0.3em] text-cyan-300 text-sm mb-5">
+            <div class="flex justify-between items-start mb-10">
 
-        Mobile experience
+              <div>
 
-      </p>
+                <p class="text-sm text-gray-400">
 
-      <h2 class="section-heading max-w-5xl mx-auto">
-
-        Designed like emotional quiet in your pocket.
-
-      </h2>
-
-    </div>
-
-    <!-- ================= SCROLL ================= -->
-
-    <div class="preview-scroll">
-
-      <div class="flex gap-10 min-w-max px-4 justify-center">
-
-        <!-- ===================================================== -->
-        <!-- ================= SCREEN 1 ========================== -->
-        <!-- ===================================================== -->
-
-        <div class="phone">
-
-          <div class="phone-inner">
-
-            <div>
-
-              <div class="flex justify-between items-center mb-8">
-
-                <div>
-
-                  <p class="text-sm text-gray-400">
-                    Good Evening
-                  </p>
-
-                  <h3 class="text-[54px] font-semibold mt-2 leading-[0.95]">
-
-                    How do you feel?
-
-                  </h3>
-
-                </div>
-
-                <div class="logo-ring scale-75">
-                  <div class="logo-dot"></div>
-                </div>
-
-              </div>
-
-              <div class="space-y-4">
-
-                <div class="phone-card text-[20px]">
-
-                  Mentally tired
-
-                </div>
-
-                <div class="phone-card text-[20px]">
-
-                  Overthinking
-
-                </div>
-
-                <div class="phone-card text-[20px]">
-
-                  Emotionally heavy
-
-                </div>
-
-                <div class="phone-card text-[20px]">
-
-                  Burned out
-
-                </div>
-
-              </div>
-
-            </div>
-
-            <div class="phone-button">
-
-              Continue
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- ===================================================== -->
-        <!-- ================= SCREEN 2 ========================== -->
-        <!-- ===================================================== -->
-
-        <div class="phone">
-
-          <div class="phone-inner">
-
-            <div>
-
-              <div class="flex justify-between items-center mb-8">
-
-                <div>
-
-                  <p class="text-sm text-gray-400">
-                    Tonight’s Session
-                  </p>
-
-                  <h3 class="text-[54px] font-semibold mt-2 leading-[0.95]">
-
-                    Emotional Reset
-
-                  </h3>
-
-                </div>
-
-                <div class="logo-ring scale-75">
-                  <div class="logo-dot"></div>
-                </div>
-
-              </div>
-
-              <div class="phone-card text-center">
-
-                <div class="w-28 h-28 rounded-full bg-gradient-to-br from-cyan-300/30 to-blue-400/20 mx-auto"></div>
-
-                <h4 class="text-5xl font-semibold mt-8 leading-tight">
-
-                  Releasing Mental Overload
-
-                </h4>
-
-                <p class="text-gray-400 mt-5 text-lg leading-relaxed">
-
-                  Slow breathing • Guided calm • Emotional decompression
+                  Tonight’s Session
 
                 </p>
 
-                <div class="mt-8 h-2 bg-white/10 rounded-full overflow-hidden">
+                <h3 class="text-[60px] font-semibold mt-2 leading-[0.92] tracking-[-2px]">
 
-                  <div class="w-1/2 h-full bg-cyan-300 rounded-full"></div>
+                  Emotional Reset
 
-                </div>
+                </h3>
+
+              </div>
+
+              <div class="logo-ring scale-75 mt-2">
+
+                <div class="logo-dot"></div>
 
               </div>
 
             </div>
 
-            <div class="phone-button mt-8">
+            <!-- ================= SESSION CARD ================= -->
 
-              Continue Session
+            <div class="phone-card text-center">
+
+              <div class="w-32 h-32 rounded-full bg-gradient-to-br from-cyan-300/30 to-blue-400/20 mx-auto"></div>
+
+              <h4 class="text-5xl font-semibold mt-10 leading-tight">
+
+                Releasing Mental Overload
+
+              </h4>
+
+              <p class="text-gray-400 mt-6 text-xl leading-relaxed">
+
+                Slow breathing • Guided calm • Emotional decompression
+
+              </p>
+
+              <!-- ================= PROGRESS ================= -->
+
+              <div class="mt-10 h-2 bg-white/10 rounded-full overflow-hidden">
+
+                <div class="w-1/2 h-full bg-cyan-300 rounded-full"></div>
+
+              </div>
 
             </div>
 
           </div>
 
+          <!-- ================= BUTTON ================= -->
+
+          <div class="phone-button mt-10">
+
+            Continue Session
+
+          </div>
+
         </div>
 
-        <!-- ===================================================== -->
-        <!-- ================= SCREEN 3 ========================== -->
-        <!-- ===================================================== -->
+      </div>
 
-        <div class="phone">
+      <!-- ===================================================== -->
+      <!-- ================= SCREEN 3 ========================== -->
+      <!-- ===================================================== -->
 
-          <div class="phone-inner">
+      <div class="phone">
 
-            <div>
+        <div class="phone-inner">
 
-              <div class="flex justify-between items-center mb-8">
+          <div>
 
-                <div>
+            <!-- ================= HEADER ================= -->
 
-                  <p class="text-sm text-gray-400">
-                    Your Space
-                  </p>
+            <div class="flex justify-between items-start mb-10">
 
-                  <h3 class="text-[54px] font-semibold mt-2 leading-[0.95]">
+              <div>
 
-                    Emotional Clarity
+                <p class="text-sm text-gray-400">
 
-                  </h3>
+                  Your Space
 
-                </div>
+                </p>
 
-                <div class="logo-ring scale-75">
-                  <div class="logo-dot"></div>
-                </div>
+                <h3 class="text-[60px] font-semibold mt-2 leading-[0.92] tracking-[-2px]">
+
+                  Emotional Clarity
+
+                </h3>
 
               </div>
 
-              <div class="phone-card bg-gradient-to-br from-[#182648] to-[#101827]">
+              <div class="logo-ring scale-75 mt-2">
 
-                <p class="text-[42px] leading-tight">
+                <div class="logo-dot"></div>
 
-                  “You are allowed to rest without earning it.”
+              </div>
+
+            </div>
+
+            <!-- ================= QUOTE CARD ================= -->
+
+            <div class="phone-card bg-gradient-to-br from-[#182648] to-[#101827]">
+
+              <p class="text-[42px] leading-tight">
+
+                “You are allowed to rest without earning it.”
+
+              </p>
+
+            </div>
+
+            <!-- ================= STATS ================= -->
+
+            <div class="grid grid-cols-2 gap-5 mt-6">
+
+              <!-- ================= MOOD ================= -->
+
+              <div class="phone-card">
+
+                <p class="text-sm text-gray-400">
+
+                  Mood
+
+                </p>
+
+                <p class="text-[32px] mt-3 leading-none break-words">
+
+                  Calmer
 
                 </p>
 
               </div>
 
-              <!-- ================= MOOD ENERGY ================= -->
+              <!-- ================= ENERGY ================= -->
 
-              <div class="grid grid-cols-2 gap-4 mt-6">
+              <div class="phone-card">
 
-                <div class="phone-card">
+                <p class="text-sm text-gray-400">
 
-                  <p class="text-sm text-gray-400">
+                  Energy
 
-                    Mood
+                </p>
 
-                  </p>
+                <p class="text-[32px] mt-3 leading-none break-words">
 
-                  <p class="text-[28px] mt-2 leading-none">
+                  Lighter
 
-                    Calmer
-
-                  </p>
-
-                </div>
-
-                <div class="phone-card">
-
-                  <p class="text-sm text-gray-400">
-
-                    Energy
-
-                  </p>
-
-                  <p class="text-[28px] mt-2 leading-none">
-
-                    Lighter
-
-                  </p>
-
-                </div>
+                </p>
 
               </div>
 
             </div>
 
-            <div class="phone-button">
+          </div>
 
-              Start Reflection
+          <!-- ================= BUTTON ================= -->
 
-            </div>
+          <div class="phone-button mt-10">
+
+            Start Reflection
 
           </div>
 
@@ -1055,238 +299,92 @@
 
     </div>
 
-  </section>
+  </div>
 
-  <!-- ===================================================== -->
-  <!-- ================= FEATURES ========================== -->
-  <!-- ===================================================== -->
+</section>
 
-  <section class="px-6 py-28">
+<!-- ===================================================== -->
+<!-- ================= PHONE CSS FIX ===================== -->
+<!-- ===================================================== -->
 
-    <div class="max-w-6xl mx-auto text-center mb-20">
+<style>
 
-      <p class="uppercase tracking-[0.3em] text-cyan-300 text-sm mb-5">
+  body {
 
-        Built differently
+    margin: 0;
 
-      </p>
+    overflow-x: auto;
 
-      <h2 class="section-heading">
+  }
 
-        Emotional wellness without performance pressure.
+  .phone {
 
-      </h2>
+    width: 390px;
 
-    </div>
+    min-height: 720px;
 
-    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+    border-radius: 42px;
 
-      <!-- ================= CARD ================= -->
+    padding: 16px;
 
-      <div class="feature-card">
+    background: rgba(255,255,255,0.04);
 
-        <div class="text-5xl mb-6">
-          🌙
-        </div>
+    border: 1px solid rgba(255,255,255,0.08);
 
-        <h3 class="text-3xl font-semibold mb-5">
+    backdrop-filter: blur(20px);
 
-          Emotional reset
+    box-shadow: 0 20px 60px rgba(0,0,0,0.45);
 
-        </h3>
+    flex-shrink: 0;
 
-        <p class="text-gray-300 leading-relaxed text-lg">
+  }
 
-          Calm your nervous system after mentally heavy days
-          without needing motivation or productivity.
+  .phone-inner {
 
-        </p>
+    min-height: 700px;
 
-      </div>
+    border-radius: 34px;
 
-      <!-- ================= CARD ================= -->
+    background: #0b1225;
 
-      <div class="feature-card">
+    padding: 32px;
 
-        <div class="text-5xl mb-6">
-          ✨
-        </div>
+    display: flex;
 
-        <h3 class="text-3xl font-semibold mb-5">
+    flex-direction: column;
 
-          Gentle reflection
+    justify-content: space-between;
 
-        </h3>
+  }
 
-        <p class="text-gray-300 leading-relaxed text-lg">
+  .phone-card {
 
-          Thought prompts designed to emotionally declutter
-          your mind instead of overstimulating it.
+    border-radius: 28px;
 
-        </p>
+    padding: 24px;
 
-      </div>
+    background: rgba(255,255,255,0.05);
 
-      <!-- ================= CARD ================= -->
+    border: 1px solid rgba(255,255,255,0.06);
 
-      <div class="feature-card">
+  }
 
-        <div class="text-5xl mb-6">
-          🌊
-        </div>
+  .phone-button {
 
-        <h3 class="text-3xl font-semibold mb-5">
+    background: white;
 
-          Emotionally safe
+    color: black;
 
-        </h3>
+    border-radius: 20px;
 
-        <p class="text-gray-300 leading-relaxed text-lg">
+    padding: 20px;
 
-          No toxic positivity.
-          No forced optimism.
-          Just emotional softness for real life.
+    text-align: center;
 
-        </p>
+    font-weight: 600;
 
-      </div>
+    font-size: 20px;
 
-    </div>
+  }
 
-  </section>
-
-  <!-- ===================================================== -->
-  <!-- ================= TESTIMONIALS ====================== -->
-  <!-- ===================================================== -->
-
-  <section class="px-6 py-28">
-
-    <div class="max-w-6xl mx-auto text-center mb-16">
-
-      <p class="uppercase tracking-[0.3em] text-cyan-300 text-sm mb-5">
-
-        Emotional reactions
-
-      </p>
-
-      <h2 class="section-heading">
-
-        Designed to feel emotionally lighter.
-
-      </h2>
-
-    </div>
-
-    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-
-      <!-- ================= TESTIMONIAL ================= -->
-
-      <div class="glass rounded-[28px] p-8">
-
-        <div class="text-5xl text-cyan-300/40 mb-6">
-          “
-        </div>
-
-        <p class="text-lg leading-relaxed text-gray-200">
-
-          This feels calmer than social media
-          and less overwhelming than therapy apps.
-
-        </p>
-
-      </div>
-
-      <!-- ================= TESTIMONIAL ================= -->
-
-      <div class="glass rounded-[28px] p-8">
-
-        <div class="text-5xl text-cyan-300/40 mb-6">
-          “
-        </div>
-
-        <p class="text-lg leading-relaxed text-gray-200">
-
-          The first app that made me slow down
-          instead of pushing me to do more.
-
-        </p>
-
-      </div>
-
-      <!-- ================= TESTIMONIAL ================= -->
-
-      <div class="glass rounded-[28px] p-8">
-
-        <div class="text-5xl text-cyan-300/40 mb-6">
-          “
-        </div>
-
-        <p class="text-lg leading-relaxed text-gray-200">
-
-          It feels like emotional quiet
-          in the middle of a loud world.
-
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- ===================================================== -->
-  <!-- ================= FINAL CTA ========================= -->
-  <!-- ===================================================== -->
-
-  <section class="px-6 pb-32">
-
-    <div class="max-w-5xl mx-auto glass rounded-[42px] p-12 md:p-20 text-center relative overflow-hidden">
-
-      <!-- ================= GLOW ================= -->
-
-      <div class="glow bg-cyan-400 w-[400px] h-[400px] top-[-100px] left-1/2 -translate-x-1/2"></div>
-
-      <div class="relative z-10">
-
-        <h2 class="text-5xl md:text-7xl font-bold leading-tight">
-
-          Your mind deserves
-          a softer place to land.
-
-        </h2>
-
-        <p class="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mt-8">
-
-          Join the waitlist and be among the first
-          to experience a calmer,
-          emotionally lighter digital space.
-
-        </p>
-
-        <!-- ================= BUTTON ================= -->
-
-        <a
-          href="https://tally.so/r/kdkNDo"
-          target="_blank"
-          class="inline-flex items-center justify-center bg-white text-black px-10 py-5 rounded-2xl font-semibold hover-scale mt-12 text-lg"
-        >
-
-          Join The Waitlist
-
-        </a>
-
-        <p class="text-sm text-gray-400 mt-6">
-
-          Takes less than 30 seconds.
-
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-</body>
-
-</html>
+</style>
