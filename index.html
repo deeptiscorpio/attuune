@@ -3,6 +3,10 @@
 
 <head>
 
+  <!-- ===================================================== -->
+  <!-- ================= BASIC META ======================== -->
+  <!-- ===================================================== -->
+
   <meta charset="UTF-8" />
 
   <meta
@@ -16,12 +20,12 @@
 
   <meta
     name="description"
-    content="Attuune is a calm emotional wellness platform designed for mental clarity, emotional reset, reflection, and feeling emotionally lighter in a noisy world."
+    content="Attuune is a calm emotional wellness platform designed for emotional reset, emotional clarity, self reflection, and mental softness in a loud world."
   />
 
   <meta
     name="keywords"
-    content="mental wellness, emotional wellness, mindfulness app, calm app, emotional reset, mental clarity, self reflection"
+    content="emotional wellness, mindfulness app, mental wellness, emotional reset, self reflection, emotional clarity"
   />
 
   <meta
@@ -39,10 +43,23 @@
     content="website"
   />
 
+  <meta
+    property="og:image"
+    content="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1200"
+  />
+
+  <!-- ===================================================== -->
+  <!-- ===================== FAVICON ======================= -->
+  <!-- ===================================================== -->
+
   <link
     rel="icon"
     href="https://cdn-icons-png.flaticon.com/512/1828/1828884.png"
   />
+
+  <!-- ===================================================== -->
+  <!-- ===================== FONTS ========================= -->
+  <!-- ===================================================== -->
 
   <link
     rel="preconnect"
@@ -60,9 +77,21 @@
     rel="stylesheet"
   />
 
+  <!-- ===================================================== -->
+  <!-- ==================== TAILWIND ======================= -->
+  <!-- ===================================================== -->
+
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <!-- ===================================================== -->
+  <!-- ====================== STYLES ======================= -->
+  <!-- ===================================================== -->
+
   <style>
+
+    /* ===================================================== */
+    /* ===================== GLOBAL ========================= */
+    /* ===================================================== */
 
     * {
       box-sizing: border-box;
@@ -73,11 +102,17 @@
     }
 
     body {
+
       margin: 0;
+
       overflow-x: hidden;
+
       background: #030712;
+
       color: white;
+
       font-family: 'Inter', sans-serif;
+
     }
 
     a {
@@ -85,206 +120,407 @@
     }
 
     img {
-      max-width: 100%;
+
       display: block;
+
+      max-width: 100%;
+
     }
+
+    /* ===================================================== */
+    /* ===================== GLASS ========================== */
+    /* ===================================================== */
 
     .glass {
+
       background: rgba(255,255,255,0.05);
+
       border: 1px solid rgba(255,255,255,0.08);
+
       backdrop-filter: blur(20px);
+
     }
 
+    /* ===================================================== */
+    /* ===================== HOVER ========================== */
+    /* ===================================================== */
+
     .hover-scale {
+
       transition: all .3s ease;
+
     }
 
     .hover-scale:hover {
+
       transform: scale(1.03);
+
     }
+
+    /* ===================================================== */
+    /* ================= GRADIENT TEXT ===================== */
+    /* ===================================================== */
 
     .gradient-text {
-      background: linear-gradient(to right,#ffffff,#79f2df,#b8c5ff);
+
+      background: linear-gradient(
+        to right,
+        #ffffff,
+        #79f2df,
+        #b8c5ff
+      );
+
       -webkit-background-clip: text;
+
       -webkit-text-fill-color: transparent;
+
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 60px;
-      align-items: center;
+    /* ===================================================== */
+    /* ===================== GLOW =========================== */
+    /* ===================================================== */
+
+    .glow {
+
+      position: absolute;
+
+      border-radius: 9999px;
+
+      filter: blur(120px);
+
+      opacity: .22;
+
+      z-index: 0;
+
     }
 
-    .hero-heading {
-      font-size: 72px;
-      line-height: .95;
-      font-weight: 800;
-      letter-spacing: -3px;
-      max-width: 650px;
-    }
-
-    .section-heading {
-      font-size: 62px;
-      line-height: 1;
-      font-weight: 800;
-      letter-spacing: -2px;
-    }
+    /* ===================================================== */
+    /* ===================== LOGO =========================== */
+    /* ===================================================== */
 
     .logo-ring {
+
       width: 58px;
+
       height: 58px;
+
       border-radius: 999px;
+
       position: relative;
+
       display: flex;
+
       align-items: center;
+
       justify-content: center;
+
       flex-shrink: 0;
+
     }
 
     .logo-ring::before,
     .logo-ring::after {
+
       content: "";
+
       position: absolute;
+
       border-radius: 999px;
+
       border: 2px solid rgba(120,255,255,.5);
+
     }
 
     .logo-ring::before {
+
       width: 58px;
+
       height: 58px;
+
     }
 
     .logo-ring::after {
+
       width: 38px;
+
       height: 38px;
+
     }
 
     .logo-dot {
+
       width: 10px;
+
       height: 10px;
+
       border-radius: 999px;
+
       background: #7eedd6;
+
       box-shadow: 0 0 20px #7eedd6;
+
     }
 
-    .glow {
-      position: absolute;
-      border-radius: 9999px;
-      filter: blur(120px);
-      opacity: .22;
-      z-index: 0;
+    /* ===================================================== */
+    /* ================= HERO GRID ========================== */
+    /* ===================================================== */
+
+    .hero-grid {
+
+      display: grid;
+
+      grid-template-columns: 1.1fr .9fr;
+
+      gap: 60px;
+
+      align-items: center;
+
     }
+
+    /* ===================================================== */
+    /* ================= HERO HEADING ====================== */
+    /* ===================================================== */
+
+    .hero-heading {
+
+      font-size: 72px;
+
+      line-height: .95;
+
+      font-weight: 800;
+
+      letter-spacing: -3px;
+
+      max-width: 650px;
+
+    }
+
+    /* ===================================================== */
+    /* ================= SECTION HEADING =================== */
+    /* ===================================================== */
+
+    .section-heading {
+
+      font-size: 62px;
+
+      line-height: 1;
+
+      font-weight: 800;
+
+      letter-spacing: -2px;
+
+    }
+
+    /* ===================================================== */
+    /* ==================== PHONE =========================== */
+    /* ===================================================== */
 
     .phone {
-      width: 320px;
-      min-height: 640px;
+
+      width: 360px;
+
+      min-height: 680px;
+
       border-radius: 42px;
+
       padding: 16px;
+
       background: rgba(255,255,255,0.04);
+
       border: 1px solid rgba(255,255,255,0.08);
+
       backdrop-filter: blur(20px);
+
       box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+
       flex-shrink: 0;
+
     }
+
+    /* ===================================================== */
+    /* ================= PHONE INNER ======================= */
+    /* ===================================================== */
 
     .phone-inner {
-      min-height: 606px;
+
+      min-height: 646px;
+
       border-radius: 34px;
+
       background: #0b1225;
-      padding: 28px;
+
+      padding: 32px;
+
       display: flex;
+
       flex-direction: column;
+
       justify-content: space-between;
+
     }
+
+    /* ===================================================== */
+    /* ================= PHONE CARD ======================== */
+    /* ===================================================== */
 
     .phone-card {
+
       border-radius: 24px;
-      padding: 20px;
+
+      padding: 22px;
+
       background: rgba(255,255,255,0.05);
+
       border: 1px solid rgba(255,255,255,0.06);
+
     }
+
+    /* ===================================================== */
+    /* ================= PHONE BUTTON ====================== */
+    /* ===================================================== */
 
     .phone-button {
+
       background: white;
+
       color: black;
+
       border-radius: 18px;
+
       padding: 18px;
+
       text-align: center;
+
       font-weight: 600;
+
       margin-top: auto;
+
       font-size: 20px;
+
     }
 
+    /* ===================================================== */
+    /* ================= FEATURE CARD ====================== */
+    /* ===================================================== */
+
     .feature-card {
+
       border-radius: 30px;
+
       padding: 40px;
+
       background: rgba(255,255,255,0.04);
+
       border: 1px solid rgba(255,255,255,0.08);
+
       transition: all .3s ease;
+
     }
 
     .feature-card:hover {
+
       transform: translateY(-6px);
+
       border-color: rgba(126,237,214,.35);
+
     }
 
+    /* ===================================================== */
+    /* ================= PREVIEW SCROLL ==================== */
+    /* ===================================================== */
+
     .preview-scroll {
+
       overflow-x: auto;
+
       padding-bottom: 20px;
+
     }
 
     .preview-scroll::-webkit-scrollbar {
+
       height: 6px;
+
     }
 
     .preview-scroll::-webkit-scrollbar-thumb {
+
       background: rgba(255,255,255,.2);
+
       border-radius: 999px;
+
     }
 
+    /* ===================================================== */
+    /* ================= ANIMATION ========================= */
+    /* ===================================================== */
+
     .fade-up {
+
       animation: fadeUp 1s ease forwards;
+
     }
 
     @keyframes fadeUp {
 
       from {
+
         opacity: 0;
+
         transform: translateY(30px);
+
       }
 
       to {
+
         opacity: 1;
+
         transform: translateY(0px);
+
       }
 
     }
 
+    /* ===================================================== */
+    /* ================= RESPONSIVE ======================== */
+    /* ===================================================== */
+
     @media(max-width:1100px) {
 
       .hero-grid {
+
         grid-template-columns: 1fr;
+
       }
 
       .hero-left {
+
         text-align: center;
+
       }
 
       .hero-buttons {
+
         justify-content: center;
+
       }
 
       .hero-features {
+
         justify-content: center;
+
       }
 
       .hero-heading {
+
         margin-inline: auto;
+
       }
 
       .hero-phone {
+
         margin-top: 20px;
+
       }
 
     }
@@ -292,20 +528,29 @@
     @media(max-width:700px) {
 
       .hero-heading {
+
         font-size: 52px;
+
         line-height: .98;
+
       }
 
       .section-heading {
+
         font-size: 42px;
+
       }
 
       .phone {
-        width: 300px;
+
+        width: 310px;
+
       }
 
       .phone-inner {
-        padding: 22px;
+
+        padding: 24px;
+
       }
 
     }
@@ -316,11 +561,15 @@
 
 <body>
 
-  <!-- NAVBAR -->
+  <!-- ===================================================== -->
+  <!-- ==================== NAVBAR ========================= -->
+  <!-- ===================================================== -->
 
   <nav class="fixed top-0 left-0 w-full z-50 glass">
 
     <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+
+      <!-- ================= LOGO ================= -->
 
       <div class="flex items-center gap-4">
 
@@ -342,6 +591,8 @@
 
       </div>
 
+      <!-- ================= BUTTON ================= -->
+
       <a
         href="https://tally.so/r/kdkNDo"
         target="_blank"
@@ -354,9 +605,13 @@
 
   </nav>
 
-  <!-- HERO -->
+  <!-- ===================================================== -->
+  <!-- ==================== HERO =========================== -->
+  <!-- ===================================================== -->
 
   <section class="relative min-h-screen flex items-center px-6 pt-36 overflow-hidden">
+
+    <!-- ================= GLOWS ================= -->
 
     <div class="glow bg-cyan-400 w-[500px] h-[500px] top-[-120px] left-[-120px]"></div>
 
@@ -366,12 +621,16 @@
 
       <div class="hero-grid">
 
-        <!-- LEFT -->
+        <!-- ===================================================== -->
+        <!-- ================= HERO LEFT ========================= -->
+        <!-- ===================================================== -->
 
         <div class="hero-left fade-up">
 
           <div class="inline-flex px-5 py-2 rounded-full glass text-sm text-gray-300 mb-8">
+
             Emotional wellness for modern life
+
           </div>
 
           <h1 class="hero-heading">
@@ -397,6 +656,8 @@
 
           </p>
 
+          <!-- ================= BUTTONS ================= -->
+
           <div class="flex flex-wrap gap-5 mt-12 hero-buttons">
 
             <a
@@ -416,6 +677,8 @@
 
           </div>
 
+          <!-- ================= FEATURES ================= -->
+
           <div class="flex flex-wrap gap-8 mt-12 text-gray-400 text-sm hero-features">
 
             <div>
@@ -434,7 +697,9 @@
 
         </div>
 
-        <!-- RIGHT HERO PHONE -->
+        <!-- ===================================================== -->
+        <!-- ================= HERO PHONE ======================== -->
+        <!-- ===================================================== -->
 
         <div class="flex justify-center hero-phone fade-up">
 
@@ -444,6 +709,8 @@
 
               <div>
 
+                <!-- ================= TOP ================= -->
+
                 <div class="flex justify-between items-center mb-10">
 
                   <div>
@@ -452,8 +719,10 @@
                       Tonight
                     </p>
 
-                    <h3 class="text-5xl font-semibold mt-2 leading-tight">
+                    <h3 class="text-[54px] font-semibold mt-2 leading-[0.95]">
+
                       Emotional Reset
+
                     </h3>
 
                   </div>
@@ -464,6 +733,8 @@
 
                 </div>
 
+                <!-- ================= CONTENT ================= -->
+
                 <div class="space-y-5">
 
                   <div class="phone-card">
@@ -473,7 +744,9 @@
                     </p>
 
                     <p class="text-2xl leading-relaxed text-gray-100">
+
                       “You don’t need to solve everything tonight.”
+
                     </p>
 
                   </div>
@@ -485,8 +758,10 @@
                     </p>
 
                     <p class="text-xl leading-relaxed text-gray-100">
+
                       Breathe slowly.
                       Let your nervous system soften.
+
                     </p>
 
                   </div>
@@ -496,7 +771,9 @@
               </div>
 
               <div class="phone-button">
+
                 Start Your Reset
+
               </div>
 
             </div>
@@ -511,7 +788,9 @@
 
   </section>
 
-  <!-- MOBILE PREVIEW -->
+  <!-- ===================================================== -->
+  <!-- ================= MOBILE PREVIEW ==================== -->
+  <!-- ===================================================== -->
 
   <section
     id="preview"
@@ -521,20 +800,28 @@
     <div class="max-w-7xl mx-auto text-center mb-20">
 
       <p class="uppercase tracking-[0.3em] text-cyan-300 text-sm mb-5">
+
         Mobile experience
+
       </p>
 
       <h2 class="section-heading max-w-5xl mx-auto">
+
         Designed like emotional quiet in your pocket.
+
       </h2>
 
     </div>
+
+    <!-- ================= SCROLL ================= -->
 
     <div class="preview-scroll">
 
       <div class="flex gap-10 min-w-max px-4 justify-center">
 
-        <!-- SCREEN 1 -->
+        <!-- ===================================================== -->
+        <!-- ================= SCREEN 1 ========================== -->
+        <!-- ===================================================== -->
 
         <div class="phone">
 
@@ -550,8 +837,10 @@
                     Good Evening
                   </p>
 
-                  <h3 class="text-5xl font-semibold mt-2 leading-tight">
+                  <h3 class="text-[54px] font-semibold mt-2 leading-[0.95]">
+
                     How do you feel?
+
                   </h3>
 
                 </div>
@@ -564,20 +853,28 @@
 
               <div class="space-y-4">
 
-                <div class="phone-card text-xl">
+                <div class="phone-card text-[20px]">
+
                   Mentally tired
+
                 </div>
 
-                <div class="phone-card text-xl">
+                <div class="phone-card text-[20px]">
+
                   Overthinking
+
                 </div>
 
-                <div class="phone-card text-xl">
+                <div class="phone-card text-[20px]">
+
                   Emotionally heavy
+
                 </div>
 
-                <div class="phone-card text-xl">
+                <div class="phone-card text-[20px]">
+
                   Burned out
+
                 </div>
 
               </div>
@@ -585,14 +882,18 @@
             </div>
 
             <div class="phone-button">
+
               Continue
+
             </div>
 
           </div>
 
         </div>
 
-        <!-- SCREEN 2 -->
+        <!-- ===================================================== -->
+        <!-- ================= SCREEN 2 ========================== -->
+        <!-- ===================================================== -->
 
         <div class="phone">
 
@@ -608,8 +909,10 @@
                     Tonight’s Session
                   </p>
 
-                  <h3 class="text-5xl font-semibold mt-2 leading-tight">
+                  <h3 class="text-[54px] font-semibold mt-2 leading-[0.95]">
+
                     Emotional Reset
+
                   </h3>
 
                 </div>
@@ -622,10 +925,12 @@
 
               <div class="phone-card text-center">
 
-                <div class="w-24 h-24 rounded-full bg-gradient-to-br from-cyan-300/30 to-blue-400/20 mx-auto"></div>
+                <div class="w-28 h-28 rounded-full bg-gradient-to-br from-cyan-300/30 to-blue-400/20 mx-auto"></div>
 
-                <h4 class="text-4xl font-semibold mt-8 leading-tight">
+                <h4 class="text-5xl font-semibold mt-8 leading-tight">
+
                   Releasing Mental Overload
+
                 </h4>
 
                 <p class="text-gray-400 mt-5 text-lg leading-relaxed">
@@ -645,14 +950,18 @@
             </div>
 
             <div class="phone-button mt-8">
+
               Continue Session
+
             </div>
 
           </div>
 
         </div>
 
-        <!-- SCREEN 3 -->
+        <!-- ===================================================== -->
+        <!-- ================= SCREEN 3 ========================== -->
+        <!-- ===================================================== -->
 
         <div class="phone">
 
@@ -668,8 +977,10 @@
                     Your Space
                   </p>
 
-                  <h3 class="text-5xl font-semibold mt-2 leading-tight">
+                  <h3 class="text-[54px] font-semibold mt-2 leading-[0.95]">
+
                     Emotional Clarity
+
                   </h3>
 
                 </div>
@@ -682,7 +993,7 @@
 
               <div class="phone-card bg-gradient-to-br from-[#182648] to-[#101827]">
 
-                <p class="text-2xl leading-relaxed">
+                <p class="text-[42px] leading-tight">
 
                   “You are allowed to rest without earning it.”
 
@@ -690,28 +1001,38 @@
 
               </div>
 
-              <div class="flex gap-4 mt-6">
+              <!-- ================= MOOD ENERGY ================= -->
 
-                <div class="phone-card flex-1">
+              <div class="grid grid-cols-2 gap-4 mt-6">
+
+                <div class="phone-card">
 
                   <p class="text-sm text-gray-400">
+
                     Mood
+
                   </p>
 
-                  <p class="text-xl mt-2 whitespace-nowrap">
+                  <p class="text-[28px] mt-2 leading-none">
+
                     Calmer
+
                   </p>
 
                 </div>
 
-                <div class="phone-card flex-1">
+                <div class="phone-card">
 
                   <p class="text-sm text-gray-400">
+
                     Energy
+
                   </p>
 
-                  <p class="text-xl mt-2 whitespace-nowrap">
+                  <p class="text-[28px] mt-2 leading-none">
+
                     Lighter
+
                   </p>
 
                 </div>
@@ -721,7 +1042,9 @@
             </div>
 
             <div class="phone-button">
+
               Start Reflection
+
             </div>
 
           </div>
@@ -734,23 +1057,31 @@
 
   </section>
 
-  <!-- FEATURES -->
+  <!-- ===================================================== -->
+  <!-- ================= FEATURES ========================== -->
+  <!-- ===================================================== -->
 
   <section class="px-6 py-28">
 
     <div class="max-w-6xl mx-auto text-center mb-20">
 
       <p class="uppercase tracking-[0.3em] text-cyan-300 text-sm mb-5">
+
         Built differently
+
       </p>
 
       <h2 class="section-heading">
+
         Emotional wellness without performance pressure.
+
       </h2>
 
     </div>
 
     <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+
+      <!-- ================= CARD ================= -->
 
       <div class="feature-card">
 
@@ -759,7 +1090,9 @@
         </div>
 
         <h3 class="text-3xl font-semibold mb-5">
+
           Emotional reset
+
         </h3>
 
         <p class="text-gray-300 leading-relaxed text-lg">
@@ -771,6 +1104,8 @@
 
       </div>
 
+      <!-- ================= CARD ================= -->
+
       <div class="feature-card">
 
         <div class="text-5xl mb-6">
@@ -778,7 +1113,9 @@
         </div>
 
         <h3 class="text-3xl font-semibold mb-5">
+
           Gentle reflection
+
         </h3>
 
         <p class="text-gray-300 leading-relaxed text-lg">
@@ -790,6 +1127,8 @@
 
       </div>
 
+      <!-- ================= CARD ================= -->
+
       <div class="feature-card">
 
         <div class="text-5xl mb-6">
@@ -797,7 +1136,9 @@
         </div>
 
         <h3 class="text-3xl font-semibold mb-5">
+
           Emotionally safe
+
         </h3>
 
         <p class="text-gray-300 leading-relaxed text-lg">
@@ -814,23 +1155,31 @@
 
   </section>
 
-  <!-- TESTIMONIALS -->
+  <!-- ===================================================== -->
+  <!-- ================= TESTIMONIALS ====================== -->
+  <!-- ===================================================== -->
 
   <section class="px-6 py-28">
 
     <div class="max-w-6xl mx-auto text-center mb-16">
 
       <p class="uppercase tracking-[0.3em] text-cyan-300 text-sm mb-5">
+
         Emotional reactions
+
       </p>
 
       <h2 class="section-heading">
+
         Designed to feel emotionally lighter.
+
       </h2>
 
     </div>
 
     <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+
+      <!-- ================= TESTIMONIAL ================= -->
 
       <div class="glass rounded-[28px] p-8">
 
@@ -847,6 +1196,8 @@
 
       </div>
 
+      <!-- ================= TESTIMONIAL ================= -->
+
       <div class="glass rounded-[28px] p-8">
 
         <div class="text-5xl text-cyan-300/40 mb-6">
@@ -861,6 +1212,8 @@
         </p>
 
       </div>
+
+      <!-- ================= TESTIMONIAL ================= -->
 
       <div class="glass rounded-[28px] p-8">
 
@@ -881,11 +1234,15 @@
 
   </section>
 
-  <!-- FINAL CTA -->
+  <!-- ===================================================== -->
+  <!-- ================= FINAL CTA ========================= -->
+  <!-- ===================================================== -->
 
   <section class="px-6 pb-32">
 
     <div class="max-w-5xl mx-auto glass rounded-[42px] p-12 md:p-20 text-center relative overflow-hidden">
+
+      <!-- ================= GLOW ================= -->
 
       <div class="glow bg-cyan-400 w-[400px] h-[400px] top-[-100px] left-1/2 -translate-x-1/2"></div>
 
@@ -906,16 +1263,22 @@
 
         </p>
 
+        <!-- ================= BUTTON ================= -->
+
         <a
           href="https://tally.so/r/kdkNDo"
           target="_blank"
           class="inline-flex items-center justify-center bg-white text-black px-10 py-5 rounded-2xl font-semibold hover-scale mt-12 text-lg"
         >
+
           Join The Waitlist
+
         </a>
 
         <p class="text-sm text-gray-400 mt-6">
+
           Takes less than 30 seconds.
+
         </p>
 
       </div>
