@@ -1,20 +1,64 @@
-# Attuune Landing Page — Complete index.html
-
-```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Attuune — Emotional Wellness</title>
-  <meta name="description" content="A calmer digital space for emotional reset, mental clarity, and emotionally safe modern living." />
 
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>
+    Attuune — Emotional Wellness
+  </title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta
+    name="description"
+    content="Attuune is a calm emotional wellness platform designed for mental clarity, emotional reset, reflection, and feeling emotionally lighter in a noisy world."
+  />
+
+  <meta
+    name="keywords"
+    content="mental wellness, emotional wellness, mindfulness app, calm app, emotional reset, mental clarity, self reflection"
+  />
+
+  <meta
+    property="og:title"
+    content="Attuune — Emotional Wellness"
+  />
+
+  <meta
+    property="og:description"
+    content="A calmer digital space for emotional reset and emotional clarity."
+  />
+
+  <meta
+    property="og:type"
+    content="website"
+  />
+
+  <link
+    rel="icon"
+    href="https://cdn-icons-png.flaticon.com/512/1828/1828884.png"
+  />
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -31,7 +75,7 @@
     body {
       margin: 0;
       overflow-x: hidden;
-      background: #040816;
+      background: #030712;
       color: white;
       font-family: 'Inter', sans-serif;
     }
@@ -40,10 +84,15 @@
       text-decoration: none;
     }
 
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
     .glass {
       background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(18px);
       border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(20px);
     }
 
     .hover-scale {
@@ -55,17 +104,31 @@
     }
 
     .gradient-text {
-      background: linear-gradient(to right,#ffffff,#7eedd6,#b9b6ff);
+      background: linear-gradient(to right,#ffffff,#79f2df,#b8c5ff);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    .glow {
-      position: absolute;
-      border-radius: 9999px;
-      filter: blur(120px);
-      opacity: .22;
-      z-index: 0;
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-heading {
+      font-size: 72px;
+      line-height: .95;
+      font-weight: 800;
+      letter-spacing: -3px;
+      max-width: 650px;
+    }
+
+    .section-heading {
+      font-size: 62px;
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: -2px;
     }
 
     .logo-ring {
@@ -105,30 +168,17 @@
       box-shadow: 0 0 20px #7eedd6;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 60px;
-      align-items: center;
-    }
-
-    .hero-heading {
-      font-size: 82px;
-      line-height: .95;
-      font-weight: 800;
-      letter-spacing: -3px;
-    }
-
-    .section-heading {
-      font-size: 68px;
-      line-height: 1;
-      font-weight: 800;
-      letter-spacing: -3px;
+    .glow {
+      position: absolute;
+      border-radius: 9999px;
+      filter: blur(120px);
+      opacity: .22;
+      z-index: 0;
     }
 
     .phone {
-      width: 340px;
-      min-height: 690px;
+      width: 320px;
+      min-height: 640px;
       border-radius: 42px;
       padding: 16px;
       background: rgba(255,255,255,0.04);
@@ -139,7 +189,7 @@
     }
 
     .phone-inner {
-      min-height: 656px;
+      min-height: 606px;
       border-radius: 34px;
       background: #0b1225;
       padding: 28px;
@@ -166,6 +216,19 @@
       font-size: 20px;
     }
 
+    .feature-card {
+      border-radius: 30px;
+      padding: 40px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: all .3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(126,237,214,.35);
+    }
+
     .preview-scroll {
       overflow-x: auto;
       padding-bottom: 20px;
@@ -180,24 +243,12 @@
       border-radius: 999px;
     }
 
-    .feature-card {
-      border-radius: 30px;
-      padding: 40px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.08);
-      transition: all .3s ease;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-5px);
-      border-color: rgba(126,237,214,.3);
-    }
-
     .fade-up {
       animation: fadeUp 1s ease forwards;
     }
 
     @keyframes fadeUp {
+
       from {
         opacity: 0;
         transform: translateY(30px);
@@ -207,6 +258,7 @@
         opacity: 1;
         transform: translateY(0px);
       }
+
     }
 
     @media(max-width:1100px) {
@@ -227,16 +279,12 @@
         justify-content: center;
       }
 
-      .hero-phone {
-        margin-top: 40px;
-      }
-
       .hero-heading {
-        font-size: 72px;
+        margin-inline: auto;
       }
 
-      .section-heading {
-        font-size: 54px;
+      .hero-phone {
+        margin-top: 20px;
       }
 
     }
@@ -244,31 +292,34 @@
     @media(max-width:700px) {
 
       .hero-heading {
-        font-size: 54px;
-        letter-spacing: -2px;
+        font-size: 52px;
+        line-height: .98;
       }
 
       .section-heading {
-        font-size: 40px;
+        font-size: 42px;
       }
 
       .phone {
         width: 300px;
-        min-height: 620px;
       }
 
       .phone-inner {
-        min-height: 590px;
+        padding: 22px;
       }
 
     }
 
   </style>
+
 </head>
 
 <body>
 
+  <!-- NAVBAR -->
+
   <nav class="fixed top-0 left-0 w-full z-50 glass">
+
     <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
 
       <div class="flex items-center gap-4">
@@ -278,6 +329,7 @@
         </div>
 
         <div>
+
           <h1 class="text-2xl font-semibold gradient-text">
             attuune
           </h1>
@@ -285,6 +337,7 @@
           <p class="text-sm text-gray-400">
             emotional wellness
           </p>
+
         </div>
 
       </div>
@@ -298,17 +351,22 @@
       </a>
 
     </div>
+
   </nav>
+
+  <!-- HERO -->
 
   <section class="relative min-h-screen flex items-center px-6 pt-36 overflow-hidden">
 
-    <div class="glow bg-cyan-400 w-[500px] h-[500px] top-[-100px] left-[-100px]"></div>
+    <div class="glow bg-cyan-400 w-[500px] h-[500px] top-[-120px] left-[-120px]"></div>
 
-    <div class="glow bg-blue-500 w-[500px] h-[500px] bottom-[-100px] right-[-100px]"></div>
+    <div class="glow bg-blue-500 w-[500px] h-[500px] bottom-[-120px] right-[-120px]"></div>
 
     <div class="max-w-7xl mx-auto relative z-10 w-full">
 
       <div class="hero-grid">
+
+        <!-- LEFT -->
 
         <div class="hero-left fade-up">
 
@@ -316,15 +374,27 @@
             Emotional wellness for modern life
           </div>
 
-          <h1 class="hero-heading max-w-[700px]">
+          <h1 class="hero-heading">
+
             The world got
-            <span class="gradient-text block">louder.</span>
+
+            <span class="gradient-text block">
+              louder.
+            </span>
+
             Your mind didn’t.
+
           </h1>
 
           <p class="mt-10 text-xl text-gray-300 leading-relaxed max-w-2xl">
-            A calm digital space to emotionally reset, clear your thoughts,
-            and feel mentally lighter — without pressure, noise, or emotional overwhelm.
+
+            A calm digital space to emotionally reset,
+            clear your thoughts,
+            and feel mentally lighter —
+            without pressure,
+            noise,
+            or emotional overwhelm.
+
           </p>
 
           <div class="flex flex-wrap gap-5 mt-12 hero-buttons">
@@ -347,12 +417,24 @@
           </div>
 
           <div class="flex flex-wrap gap-8 mt-12 text-gray-400 text-sm hero-features">
-            <div>✓ Emotionally safe</div>
-            <div>✓ No toxic positivity</div>
-            <div>✓ Designed for real life</div>
+
+            <div>
+              ✓ Emotionally safe
+            </div>
+
+            <div>
+              ✓ No toxic positivity
+            </div>
+
+            <div>
+              ✓ Designed for real life
+            </div>
+
           </div>
 
         </div>
+
+        <!-- RIGHT HERO PHONE -->
 
         <div class="flex justify-center hero-phone fade-up">
 
@@ -365,11 +447,15 @@
                 <div class="flex justify-between items-center mb-10">
 
                   <div>
-                    <p class="text-sm text-gray-400">Tonight</p>
 
-                    <h3 class="text-6xl font-semibold mt-2 leading-tight">
+                    <p class="text-sm text-gray-400">
+                      Tonight
+                    </p>
+
+                    <h3 class="text-5xl font-semibold mt-2 leading-tight">
                       Emotional Reset
                     </h3>
+
                   </div>
 
                   <div class="logo-ring scale-75">
@@ -381,6 +467,7 @@
                 <div class="space-y-5">
 
                   <div class="phone-card">
+
                     <p class="text-sm text-gray-400 mb-3">
                       Reflection
                     </p>
@@ -388,6 +475,7 @@
                     <p class="text-2xl leading-relaxed text-gray-100">
                       “You don’t need to solve everything tonight.”
                     </p>
+
                   </div>
 
                   <div class="phone-card bg-gradient-to-r from-[#182648] to-[#121b34]">
@@ -397,7 +485,8 @@
                     </p>
 
                     <p class="text-xl leading-relaxed text-gray-100">
-                      Breathe slowly. Let your nervous system soften.
+                      Breathe slowly.
+                      Let your nervous system soften.
                     </p>
 
                   </div>
@@ -422,7 +511,12 @@
 
   </section>
 
-  <section id="preview" class="px-6 py-24 overflow-hidden">
+  <!-- MOBILE PREVIEW -->
+
+  <section
+    id="preview"
+    class="px-6 py-28 overflow-hidden"
+  >
 
     <div class="max-w-7xl mx-auto text-center mb-20">
 
@@ -438,9 +532,12 @@
 
     <div class="preview-scroll">
 
-      <div class="flex gap-8 min-w-max px-4 justify-center">
+      <div class="flex gap-10 min-w-max px-4 justify-center">
+
+        <!-- SCREEN 1 -->
 
         <div class="phone">
+
           <div class="phone-inner">
 
             <div>
@@ -448,6 +545,7 @@
               <div class="flex justify-between items-center mb-8">
 
                 <div>
+
                   <p class="text-sm text-gray-400">
                     Good Evening
                   </p>
@@ -455,6 +553,7 @@
                   <h3 class="text-5xl font-semibold mt-2 leading-tight">
                     How do you feel?
                   </h3>
+
                 </div>
 
                 <div class="logo-ring scale-75">
@@ -490,7 +589,10 @@
             </div>
 
           </div>
+
         </div>
+
+        <!-- SCREEN 2 -->
 
         <div class="phone">
 
@@ -501,6 +603,7 @@
               <div class="flex justify-between items-center mb-8">
 
                 <div>
+
                   <p class="text-sm text-gray-400">
                     Tonight’s Session
                   </p>
@@ -508,6 +611,7 @@
                   <h3 class="text-5xl font-semibold mt-2 leading-tight">
                     Emotional Reset
                   </h3>
+
                 </div>
 
                 <div class="logo-ring scale-75">
@@ -525,11 +629,15 @@
                 </h4>
 
                 <p class="text-gray-400 mt-5 text-lg leading-relaxed">
+
                   Slow breathing • Guided calm • Emotional decompression
+
                 </p>
 
                 <div class="mt-8 h-2 bg-white/10 rounded-full overflow-hidden">
+
                   <div class="w-1/2 h-full bg-cyan-300 rounded-full"></div>
+
                 </div>
 
               </div>
@@ -544,6 +652,8 @@
 
         </div>
 
+        <!-- SCREEN 3 -->
+
         <div class="phone">
 
           <div class="phone-inner">
@@ -553,6 +663,7 @@
               <div class="flex justify-between items-center mb-8">
 
                 <div>
+
                   <p class="text-sm text-gray-400">
                     Your Space
                   </p>
@@ -560,6 +671,7 @@
                   <h3 class="text-5xl font-semibold mt-2 leading-tight">
                     Emotional Clarity
                   </h3>
+
                 </div>
 
                 <div class="logo-ring scale-75">
@@ -571,7 +683,9 @@
               <div class="phone-card bg-gradient-to-br from-[#182648] to-[#101827]">
 
                 <p class="text-2xl leading-relaxed">
+
                   “You are allowed to rest without earning it.”
+
                 </p>
 
               </div>
@@ -579,13 +693,27 @@
               <div class="flex gap-4 mt-6">
 
                 <div class="phone-card flex-1">
-                  <p class="text-sm text-gray-400">Mood</p>
-                  <p class="text-xl mt-2 whitespace-nowrap">Calmer</p>
+
+                  <p class="text-sm text-gray-400">
+                    Mood
+                  </p>
+
+                  <p class="text-xl mt-2 whitespace-nowrap">
+                    Calmer
+                  </p>
+
                 </div>
 
                 <div class="phone-card flex-1">
-                  <p class="text-sm text-gray-400">Energy</p>
-                  <p class="text-xl mt-2 whitespace-nowrap">Lighter</p>
+
+                  <p class="text-sm text-gray-400">
+                    Energy
+                  </p>
+
+                  <p class="text-xl mt-2 whitespace-nowrap">
+                    Lighter
+                  </p>
+
                 </div>
 
               </div>
@@ -606,7 +734,9 @@
 
   </section>
 
-  <section class="px-6 py-24">
+  <!-- FEATURES -->
+
+  <section class="px-6 py-28">
 
     <div class="max-w-6xl mx-auto text-center mb-20">
 
@@ -624,42 +754,58 @@
 
       <div class="feature-card">
 
-        <div class="text-5xl mb-6">🌙</div>
+        <div class="text-5xl mb-6">
+          🌙
+        </div>
 
         <h3 class="text-3xl font-semibold mb-5">
           Emotional reset
         </h3>
 
         <p class="text-gray-300 leading-relaxed text-lg">
-          Calm your nervous system after mentally heavy days without needing motivation or productivity.
+
+          Calm your nervous system after mentally heavy days
+          without needing motivation or productivity.
+
         </p>
 
       </div>
 
       <div class="feature-card">
 
-        <div class="text-5xl mb-6">✨</div>
+        <div class="text-5xl mb-6">
+          ✨
+        </div>
 
         <h3 class="text-3xl font-semibold mb-5">
           Gentle reflection
         </h3>
 
         <p class="text-gray-300 leading-relaxed text-lg">
-          Thought prompts designed to emotionally declutter your mind instead of overstimulating it.
+
+          Thought prompts designed to emotionally declutter
+          your mind instead of overstimulating it.
+
         </p>
 
       </div>
 
       <div class="feature-card">
 
-        <div class="text-5xl mb-6">🌊</div>
+        <div class="text-5xl mb-6">
+          🌊
+        </div>
 
         <h3 class="text-3xl font-semibold mb-5">
           Emotionally safe
         </h3>
 
         <p class="text-gray-300 leading-relaxed text-lg">
-          No toxic positivity. No forced optimism. Just emotional softness for real life.
+
+          No toxic positivity.
+          No forced optimism.
+          Just emotional softness for real life.
+
         </p>
 
       </div>
@@ -668,7 +814,9 @@
 
   </section>
 
-  <section class="px-6 py-24">
+  <!-- TESTIMONIALS -->
+
+  <section class="px-6 py-28">
 
     <div class="max-w-6xl mx-auto text-center mb-16">
 
@@ -686,30 +834,45 @@
 
       <div class="glass rounded-[28px] p-8">
 
-        <div class="text-5xl text-cyan-300/40 mb-6">“</div>
+        <div class="text-5xl text-cyan-300/40 mb-6">
+          “
+        </div>
 
         <p class="text-lg leading-relaxed text-gray-200">
-          This feels calmer than social media and less overwhelming than therapy apps.
+
+          This feels calmer than social media
+          and less overwhelming than therapy apps.
+
         </p>
 
       </div>
 
       <div class="glass rounded-[28px] p-8">
 
-        <div class="text-5xl text-cyan-300/40 mb-6">“</div>
+        <div class="text-5xl text-cyan-300/40 mb-6">
+          “
+        </div>
 
         <p class="text-lg leading-relaxed text-gray-200">
-          The first app that made me slow down instead of pushing me to do more.
+
+          The first app that made me slow down
+          instead of pushing me to do more.
+
         </p>
 
       </div>
 
       <div class="glass rounded-[28px] p-8">
 
-        <div class="text-5xl text-cyan-300/40 mb-6">“</div>
+        <div class="text-5xl text-cyan-300/40 mb-6">
+          “
+        </div>
 
         <p class="text-lg leading-relaxed text-gray-200">
-          It feels like emotional quiet in the middle of a loud world.
+
+          It feels like emotional quiet
+          in the middle of a loud world.
+
         </p>
 
       </div>
@@ -718,7 +881,9 @@
 
   </section>
 
-  <section class="px-6 pb-28">
+  <!-- FINAL CTA -->
+
+  <section class="px-6 pb-32">
 
     <div class="max-w-5xl mx-auto glass rounded-[42px] p-12 md:p-20 text-center relative overflow-hidden">
 
@@ -727,12 +892,18 @@
       <div class="relative z-10">
 
         <h2 class="text-5xl md:text-7xl font-bold leading-tight">
-          Your mind deserves a softer place to land.
+
+          Your mind deserves
+          a softer place to land.
+
         </h2>
 
         <p class="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mt-8">
-          Join the waitlist and be among the first to experience a calmer,
+
+          Join the waitlist and be among the first
+          to experience a calmer,
           emotionally lighter digital space.
+
         </p>
 
         <a
@@ -754,7 +925,5 @@
   </section>
 
 </body>
-</html>
-```
 
-This version includes the proportional hero sizing fixes, corrected mobile preview cards, non-breaking Mood/Energy cards, improved responsive scaling, and restored premium layout balance for Vercel deployment.
+</html>
