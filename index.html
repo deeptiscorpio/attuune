@@ -5,32 +5,33 @@
 
   <meta charset="UTF-8" />
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>
-    attuune — emotional wellness
-  </title>
+  <title>attuune — emotional wellness</title>
 
   <meta
     name="description"
     content="A calm emotional wellness platform designed for emotional reset, reflection, clarity, and softer living."
   />
 
-  <!-- GOOGLE FONT -->
+  <!-- FAVICON -->
 
   <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com"
+    rel="icon"
+    type="image/svg+xml"
+    href='data:image/svg+xml,
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="40" stroke="%237eedd6" stroke-width="4" fill="none"/>
+      <circle cx="50" cy="50" r="24" stroke="%237eedd6" stroke-width="3" fill="none"/>
+      <circle cx="50" cy="50" r="7" fill="%237eedd6"/>
+    </svg>'
   />
 
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  />
+  <!-- FONT -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
@@ -40,8 +41,6 @@
   <!-- TAILWIND -->
 
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- STYLES -->
 
   <style>
 
@@ -57,7 +56,7 @@
 
       margin: 0;
 
-      overflow-x: auto;
+      overflow-x: hidden;
 
       background: #030712;
 
@@ -139,49 +138,6 @@
     }
 
     /* ===================================================== */
-    /* ===================== HERO =========================== */
-    /* ===================================================== */
-
-    .hero-grid {
-
-      display: grid;
-
-      grid-template-columns: 1.1fr .9fr;
-
-      gap: 60px;
-
-      align-items: center;
-
-    }
-
-    .hero-heading {
-
-      font-size: 88px;
-
-      line-height: .92;
-
-      font-weight: 800;
-
-      letter-spacing: -4px;
-
-    }
-
-    .gradient-text {
-
-      background: linear-gradient(
-        to right,
-        #ffffff,
-        #79f2df,
-        #b8c5ff
-      );
-
-      -webkit-background-clip: text;
-
-      -webkit-text-fill-color: transparent;
-
-    }
-
-    /* ===================================================== */
     /* ===================== GLASS ========================== */
     /* ===================================================== */
 
@@ -252,6 +208,49 @@
     .secondary-btn:hover {
 
       background: rgba(255,255,255,0.08);
+
+    }
+
+    /* ===================================================== */
+    /* ===================== HERO =========================== */
+    /* ===================================================== */
+
+    .hero-grid {
+
+      display: grid;
+
+      grid-template-columns: 1.1fr .9fr;
+
+      gap: 60px;
+
+      align-items: center;
+
+    }
+
+    .hero-heading {
+
+      font-size: 92px;
+
+      line-height: .92;
+
+      font-weight: 800;
+
+      letter-spacing: -4px;
+
+    }
+
+    .gradient-text {
+
+      background: linear-gradient(
+        to right,
+        #ffffff,
+        #79f2df,
+        #b8c5ff
+      );
+
+      -webkit-background-clip: text;
+
+      -webkit-text-fill-color: transparent;
 
     }
 
@@ -473,9 +472,7 @@
 
 <body>
 
-  <!-- ===================================================== -->
-  <!-- ===================== NAVBAR ======================== -->
-  <!-- ===================================================== -->
+  <!-- NAVBAR -->
 
   <nav class="fixed top-0 left-0 w-full z-50 glass">
 
@@ -519,15 +516,11 @@
 
   </nav>
 
-  <!-- ===================================================== -->
-  <!-- ===================== HERO ========================== -->
-  <!-- ===================================================== -->
+  <!-- HERO -->
 
   <section class="relative min-h-screen flex items-center px-6 pt-36 overflow-hidden">
 
     <div class="glow bg-cyan-400 w-[500px] h-[500px] top-[-120px] left-[-120px]"></div>
-
-    <div class="glow bg-blue-500 w-[500px] h-[500px] bottom-[-120px] right-[-120px]"></div>
 
     <div class="max-w-7xl mx-auto relative z-10 w-full">
 
@@ -589,25 +582,9 @@
 
           </div>
 
-          <div class="flex flex-wrap gap-8 mt-12 text-gray-400 text-sm">
-
-            <div>
-              ✓ Emotionally safe
-            </div>
-
-            <div>
-              ✓ No toxic positivity
-            </div>
-
-            <div>
-              ✓ Designed for real life
-            </div>
-
-          </div>
-
         </div>
 
-        <!-- RIGHT -->
+        <!-- HERO PHONE -->
 
         <div class="flex justify-center">
 
@@ -700,9 +677,7 @@
 
   </section>
 
-  <!-- ===================================================== -->
-  <!-- ================= MOBILE PREVIEW ==================== -->
-  <!-- ===================================================== -->
+  <!-- MOBILE PREVIEW -->
 
   <section
     id="preview"
@@ -710,12 +685,6 @@
   >
 
     <div class="max-w-7xl mx-auto text-center mb-24">
-
-      <p class="uppercase tracking-[0.3em] text-cyan-300 text-sm mb-6">
-
-        Mobile experience
-
-      </p>
 
       <h2 class="section-heading max-w-4xl mx-auto leading-[1.05]">
 
@@ -742,23 +711,17 @@
                 <div>
 
                   <p class="text-sm text-gray-400">
-
                     Good Evening
-
                   </p>
 
                   <h3 class="text-[52px] font-semibold mt-3 leading-[0.92] tracking-[-2px]">
-
                     How do you feel?
-
                   </h3>
 
                 </div>
 
                 <div class="logo-ring scale-75 mt-3">
-
                   <div class="logo-dot"></div>
-
                 </div>
 
               </div>
@@ -786,9 +749,7 @@
             </div>
 
             <div class="phone-button">
-
               Continue
-
             </div>
 
           </div>
@@ -808,23 +769,17 @@
                 <div>
 
                   <p class="text-sm text-gray-400">
-
                     Tonight’s Session
-
                   </p>
 
                   <h3 class="text-[52px] font-semibold mt-3 leading-[0.92] tracking-[-2px]">
-
                     Emotional Reset
-
                   </h3>
 
                 </div>
 
                 <div class="logo-ring scale-75 mt-3">
-
                   <div class="logo-dot"></div>
-
                 </div>
 
               </div>
@@ -845,20 +800,12 @@
 
                 </p>
 
-                <div class="mt-10 h-2 bg-white/10 rounded-full overflow-hidden">
-
-                  <div class="w-1/2 h-full bg-cyan-300 rounded-full"></div>
-
-                </div>
-
               </div>
 
             </div>
 
             <div class="phone-button">
-
               Continue Session
-
             </div>
 
           </div>
@@ -878,30 +825,24 @@
                 <div>
 
                   <p class="text-sm text-gray-400">
-
                     Your Space
-
                   </p>
 
                   <h3 class="text-[52px] font-semibold mt-3 leading-[0.92] tracking-[-2px]">
-
                     Emotional Clarity
-
                   </h3>
 
                 </div>
 
                 <div class="logo-ring scale-75 mt-3">
-
                   <div class="logo-dot"></div>
-
                 </div>
 
               </div>
 
-              <div class="phone-card bg-gradient-to-br from-[#182648] to-[#101827]">
+              <div class="phone-card">
 
-                <p class="text-[32px] leading-snug">
+                <p class="text-[30px] leading-snug">
 
                   “You are allowed to rest without earning it.”
 
@@ -914,15 +855,11 @@
                 <div class="phone-card">
 
                   <p class="text-sm text-gray-400">
-
                     Mood
-
                   </p>
 
                   <p class="text-[28px] mt-3 leading-tight">
-
                     Calmer
-
                   </p>
 
                 </div>
@@ -930,15 +867,11 @@
                 <div class="phone-card">
 
                   <p class="text-sm text-gray-400">
-
                     Energy
-
                   </p>
 
                   <p class="text-[28px] mt-3 leading-tight">
-
                     Lighter
-
                   </p>
 
                 </div>
@@ -948,9 +881,7 @@
             </div>
 
             <div class="phone-button">
-
               Start Reflection
-
             </div>
 
           </div>
