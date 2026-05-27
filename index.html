@@ -5,13 +5,16 @@
 
   <meta charset="UTF-8" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
 
   <title>attuune — emotional wellness</title>
 
   <meta
     name="description"
-    content="A calm emotional wellness platform designed for emotional reset, reflection, clarity, and softer living."
+    content="A calm emotional wellness platform for emotional reset, softer living, and meaningful human connection."
   />
 
   <!-- FAVICON -->
@@ -27,7 +30,7 @@
     </svg>'
   />
 
-  <!-- FONT -->
+  <!-- GOOGLE FONT -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
 
@@ -62,17 +65,25 @@
 
       font-family: 'Inter', sans-serif;
 
+      overflow-x: hidden;
+
     }
 
     a {
       text-decoration: none;
     }
 
+    /* ========================= */
+
+    /* LOGO */
+
+    /* ========================= */
+
     .logo-ring {
 
-      width: 58px;
+      width: 60px;
 
-      height: 58px;
+      height: 60px;
 
       border-radius: 999px;
 
@@ -97,15 +108,15 @@
 
       border-radius: 999px;
 
-      border: 2px solid rgba(120,255,255,.5);
+      border: 2px solid rgba(126,237,214,.5);
 
     }
 
     .logo-ring::before {
 
-      width: 58px;
+      width: 60px;
 
-      height: 58px;
+      height: 60px;
 
     }
 
@@ -127,39 +138,51 @@
 
       background: #7eedd6;
 
-      box-shadow: 0 0 20px #7eedd6;
+      box-shadow: 0 0 18px #7eedd6;
 
     }
+
+    /* ========================= */
+
+    /* GLASS */
+
+    /* ========================= */
 
     .glass {
 
       background: rgba(255,255,255,0.05);
 
-      border: 1px solid rgba(255,255,255,0.08);
-
       backdrop-filter: blur(20px);
+
+      border: 1px solid rgba(255,255,255,0.08);
 
     }
 
+    /* ========================= */
+
+    /* BUTTONS */
+
+    /* ========================= */
+
     .primary-btn {
-
-      background: white;
-
-      color: black;
-
-      padding: 18px 34px;
-
-      border-radius: 22px;
-
-      font-weight: 600;
-
-      transition: .3s ease;
 
       display: inline-flex;
 
       align-items: center;
 
       justify-content: center;
+
+      padding: 18px 34px;
+
+      border-radius: 24px;
+
+      background: white;
+
+      color: black;
+
+      font-weight: 600;
+
+      transition: .3s ease;
 
     }
 
@@ -171,23 +194,25 @@
 
     .secondary-btn {
 
-      background: rgba(255,255,255,0.04);
-
-      border: 1px solid rgba(255,255,255,0.08);
-
-      padding: 18px 34px;
-
-      border-radius: 22px;
-
-      font-weight: 500;
-
-      transition: .3s ease;
-
       display: inline-flex;
 
       align-items: center;
 
       justify-content: center;
+
+      padding: 18px 34px;
+
+      border-radius: 24px;
+
+      border: 1px solid rgba(255,255,255,0.08);
+
+      background: rgba(255,255,255,0.04);
+
+      color: white;
+
+      font-weight: 500;
+
+      transition: .3s ease;
 
     }
 
@@ -197,13 +222,19 @@
 
     }
 
+    /* ========================= */
+
+    /* HERO */
+
+    /* ========================= */
+
     .hero-grid {
 
       display: grid;
 
-      grid-template-columns: 1.1fr .9fr;
+      grid-template-columns: 1.2fr .8fr;
 
-      gap: 60px;
+      gap: 80px;
 
       align-items: center;
 
@@ -211,13 +242,13 @@
 
     .hero-heading {
 
-      font-size: 92px;
+      font-size: 108px;
 
       line-height: .92;
 
-      font-weight: 800;
+      letter-spacing: -5px;
 
-      letter-spacing: -4px;
+      font-weight: 800;
 
     }
 
@@ -226,8 +257,8 @@
       background: linear-gradient(
         to right,
         #ffffff,
-        #79f2df,
-        #b8c5ff
+        #7eedd6,
+        #9cb8ff
       );
 
       -webkit-background-clip: text;
@@ -236,40 +267,566 @@
 
     }
 
-    .phone {
+    /* ========================= */
 
-      width: 420px;
+    /* SECTION TITLES */
 
-      min-width: 420px;
+    /* ========================= */
 
-      height: 760px;
+    .section-title {
 
-      border-radius: 42px;
+      font-size: 72px;
 
-      padding: 16px;
+      line-height: 1.04;
+
+      font-weight: 800;
+
+      letter-spacing: -3px;
+
+    }
+
+    /* ========================= */
+
+    /* CARDS */
+
+    /* ========================= */
+
+    .card {
 
       background: rgba(255,255,255,0.04);
 
       border: 1px solid rgba(255,255,255,0.08);
 
+      border-radius: 34px;
+
+      padding: 42px;
+
+      transition: .3s ease;
+
       backdrop-filter: blur(20px);
-
-      box-shadow: 0 20px 60px rgba(0,0,0,0.45);
-
-      flex-shrink: 0;
 
     }
 
-    .phone-inner {
+    .card:hover {
 
-      height: 100%;
+      transform: translateY(-5px);
 
-      border-radius: 34px;
+      border-color: rgba(126,237,214,.3);
 
-      background: #0b1225;
+    }
 
-      padding: 36px;
+    /* ========================= */
 
-      display: flex;
+    /* GLOW */
 
-      flex
+    /* ========================= */
+
+    .glow {
+
+      position: absolute;
+
+      border-radius: 999px;
+
+      filter: blur(120px);
+
+      opacity: .16;
+
+      z-index: 0;
+
+    }
+
+    /* ========================= */
+
+    /* RESPONSIVE */
+
+    /* ========================= */
+
+    @media(max-width:1100px) {
+
+      .hero-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .hero-heading {
+
+        font-size: 76px;
+
+      }
+
+      .section-title {
+
+        font-size: 54px;
+
+      }
+
+    }
+
+    @media(max-width:700px) {
+
+      .hero-heading {
+
+        font-size: 56px;
+
+        line-height: 1;
+
+      }
+
+      .section-title {
+
+        font-size: 40px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav class="fixed top-0 left-0 w-full z-50 glass">
+
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+
+      <div class="flex items-center gap-4">
+
+        <div class="logo-ring">
+
+          <div class="logo-dot"></div>
+
+        </div>
+
+        <div>
+
+          <h1 class="text-2xl font-semibold gradient-text">
+
+            attuune
+
+          </h1>
+
+          <p class="text-sm text-gray-400">
+
+            emotional wellness
+
+          </p>
+
+        </div>
+
+      </div>
+
+      <a
+        href="https://tally.so/r/kdkNDo"
+        target="_blank"
+        class="primary-btn"
+      >
+
+        Join Waitlist
+
+      </a>
+
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="relative min-h-screen flex items-center pt-40 px-6 overflow-hidden">
+
+    <div class="glow bg-cyan-400 w-[500px] h-[500px] top-[-150px] left-[-120px]"></div>
+
+    <div class="glow bg-blue-500 w-[400px] h-[400px] bottom-[-120px] right-[-120px]"></div>
+
+    <div class="max-w-7xl mx-auto relative z-10 w-full">
+
+      <div class="hero-grid">
+
+        <!-- LEFT -->
+
+        <div>
+
+          <div class="inline-flex px-5 py-2 rounded-full glass text-sm text-gray-300 mb-10">
+
+            Emotional wellness for modern life
+
+          </div>
+
+          <h1 class="hero-heading">
+
+            The world got
+
+            <span class="gradient-text block">
+
+              louder.
+
+            </span>
+
+            Your mind didn’t.
+
+          </h1>
+
+          <p class="mt-10 text-2xl text-gray-300 leading-relaxed max-w-2xl">
+
+            A calm emotional space designed for emotional reset,
+            softer living,
+            reflection,
+            and meaningful human connection —
+            without pressure,
+            noise,
+            or emotional overwhelm.
+
+          </p>
+
+          <div class="flex flex-wrap gap-5 mt-14">
+
+            <a
+              href="https://tally.so/r/kdkNDo"
+              target="_blank"
+              class="primary-btn"
+            >
+
+              Join Early Access
+
+            </a>
+
+            <a
+              href="#why"
+              class="secondary-btn"
+            >
+
+              Why attuune?
+
+            </a>
+
+          </div>
+
+          <div class="flex flex-wrap gap-8 mt-14 text-gray-400 text-lg">
+
+            <div>✓ Emotionally safe</div>
+
+            <div>✓ No toxic positivity</div>
+
+            <div>✓ Designed for real life</div>
+
+          </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="space-y-6">
+
+          <div class="card">
+
+            <p class="text-sm text-gray-400 mb-4">
+
+              Reflection
+
+            </p>
+
+            <p class="text-4xl leading-snug">
+
+              “You don’t need to solve everything tonight.”
+
+            </p>
+
+          </div>
+
+          <div class="card">
+
+            <p class="text-sm text-gray-400 mb-4">
+
+              Guided Calm
+
+            </p>
+
+            <p class="text-3xl leading-relaxed text-gray-100">
+
+              Breathe slowly.
+              Let your nervous system soften.
+
+            </p>
+
+          </div>
+
+          <div class="card">
+
+            <p class="text-sm text-gray-400 mb-4">
+
+              Emotional clarity
+
+            </p>
+
+            <p class="text-2xl leading-relaxed text-gray-300">
+
+              attuune isn’t built to make you more productive.
+              It’s being built to help people feel emotionally lighter.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- WHY -->
+
+  <section
+    id="why"
+    class="px-6 py-32"
+  >
+
+    <div class="max-w-7xl mx-auto">
+
+      <div class="max-w-4xl">
+
+        <p class="text-cyan-300 text-lg mb-5">
+
+          Why attuune exists
+
+        </p>
+
+        <h2 class="section-title mb-10">
+
+          Some people haven’t emotionally relaxed in years.
+
+        </h2>
+
+        <p class="text-2xl text-gray-300 leading-relaxed">
+
+          Modern life made people constantly connected,
+          emotionally overloaded,
+          mentally exhausted,
+          and quietly lonely.
+
+          <br><br>
+
+          attuune is being designed as a softer emotional ecosystem —
+          one that helps people slow down,
+          breathe,
+          emotionally reset,
+          and eventually reconnect with themselves and others.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- TESTIMONIALS -->
+
+  <section class="px-6 py-20">
+
+    <div class="max-w-7xl mx-auto">
+
+      <div class="text-center mb-20">
+
+        <p class="text-cyan-300 text-lg mb-5">
+
+          Emotional reactions
+
+        </p>
+
+        <h2 class="section-title">
+
+          Designed to feel emotionally lighter.
+
+        </h2>
+
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <div class="card">
+
+          <p class="text-2xl leading-relaxed text-gray-200">
+
+            “This feels calmer than social media and less overwhelming than therapy apps.”
+
+          </p>
+
+          <p class="mt-8 text-gray-400">
+
+            Early User
+
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <p class="text-2xl leading-relaxed text-gray-200">
+
+            “The first app that made me slow down instead of pushing me to do more.”
+
+          </p>
+
+          <p class="mt-8 text-gray-400">
+
+            Beta Member
+
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <p class="text-2xl leading-relaxed text-gray-200">
+
+            “It feels like emotional quiet in the middle of a loud world.”
+
+          </p>
+
+          <p class="mt-8 text-gray-400">
+
+            Waitlist User
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- HUMAN CONNECTION -->
+
+  <section class="px-6 py-32">
+
+    <div class="max-w-7xl mx-auto">
+
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <div>
+
+          <p class="text-cyan-300 text-lg mb-5">
+
+            Human connection
+
+          </p>
+
+          <h2 class="section-title mb-10">
+
+            Digital calm.
+            Real-world connection.
+
+          </h2>
+
+          <p class="text-2xl text-gray-300 leading-relaxed">
+
+            attuune is not just another app.
+
+            <br><br>
+
+            It’s being designed as a softer emotional ecosystem where people eventually connect through safe conversations,
+            quiet community spaces,
+            emotional wellness circles,
+            and future offline meetups.
+
+          </p>
+
+        </div>
+
+        <div class="space-y-8">
+
+          <div class="card">
+
+            <h3 class="text-3xl font-semibold mb-4">
+
+              Safe emotional spaces
+
+            </h3>
+
+            <p class="text-gray-300 text-lg leading-relaxed">
+
+              Non-judgemental conversations without performance pressure.
+
+            </p>
+
+          </div>
+
+          <div class="card">
+
+            <h3 class="text-3xl font-semibold mb-4">
+
+              Future wellness meetups
+
+            </h3>
+
+            <p class="text-gray-300 text-lg leading-relaxed">
+
+              Calm gatherings,
+              emotional reset events,
+              and meaningful human connection.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FINAL CTA -->
+
+  <section class="px-6 pt-10 pb-40">
+
+    <div class="max-w-5xl mx-auto text-center">
+
+      <div class="card p-16">
+
+        <p class="text-cyan-300 text-lg mb-5">
+
+          Emotional check-in
+
+        </p>
+
+        <h2 class="section-title mb-10">
+
+          “I just wanted a space where I could breathe emotionally.”
+
+        </h2>
+
+        <p class="text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-14">
+
+          Join the waitlist and become part of a softer,
+          emotionally safer digital experience.
+
+        </p>
+
+        <a
+          href="https://tally.so/r/kdkNDo"
+          target="_blank"
+          class="primary-btn text-xl"
+        >
+
+          Join The Waitlist
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</body>
+
+</html>
