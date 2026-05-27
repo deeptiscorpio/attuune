@@ -1,4 +1,199 @@
 <!-- ===================================================== -->
+<!-- ====================== STYLES ======================= -->
+<!-- ===================================================== -->
+
+<style>
+
+  body {
+
+    margin: 0;
+
+    overflow-x: auto;
+
+    background: #030712;
+
+    color: white;
+
+    font-family: 'Inter', sans-serif;
+
+  }
+
+  .preview-scroll {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    padding-top: 40px;
+
+    padding-bottom: 40px;
+
+  }
+
+  .preview-scroll::-webkit-scrollbar {
+
+    height: 6px;
+
+  }
+
+  .preview-scroll::-webkit-scrollbar-thumb {
+
+    background: rgba(255,255,255,.2);
+
+    border-radius: 999px;
+
+  }
+
+  .phone {
+
+    width: 420px;
+
+    min-height: 760px;
+
+    border-radius: 42px;
+
+    padding: 16px;
+
+    background: rgba(255,255,255,0.04);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(20px);
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+
+    flex-shrink: 0;
+
+  }
+
+  .phone-inner {
+
+    min-height: 720px;
+
+    border-radius: 34px;
+
+    background: #0b1225;
+
+    padding: 36px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+  }
+
+  .phone-card {
+
+    border-radius: 28px;
+
+    padding: 28px;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(255,255,255,0.06);
+
+  }
+
+  .phone-button {
+
+    background: white;
+
+    color: black;
+
+    border-radius: 20px;
+
+    padding: 22px;
+
+    text-align: center;
+
+    font-weight: 600;
+
+    font-size: 22px;
+
+    margin-top: 20px;
+
+  }
+
+  .logo-ring {
+
+    width: 58px;
+
+    height: 58px;
+
+    border-radius: 999px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+  }
+
+  .logo-ring::before,
+  .logo-ring::after {
+
+    content: "";
+
+    position: absolute;
+
+    border-radius: 999px;
+
+    border: 2px solid rgba(120,255,255,.5);
+
+  }
+
+  .logo-ring::before {
+
+    width: 58px;
+
+    height: 58px;
+
+  }
+
+  .logo-ring::after {
+
+    width: 38px;
+
+    height: 38px;
+
+  }
+
+  .logo-dot {
+
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 999px;
+
+    background: #7eedd6;
+
+    box-shadow: 0 0 20px #7eedd6;
+
+  }
+
+  .section-heading {
+
+    font-size: 72px;
+
+    line-height: 1.05;
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+
+  }
+
+</style>
+
+<!-- ===================================================== -->
 <!-- ================= MOBILE PREVIEW ==================== -->
 <!-- ===================================================== -->
 
@@ -7,15 +202,17 @@
   class="px-6 py-28 overflow-hidden"
 >
 
-  <div class="max-w-7xl mx-auto text-center mb-20">
+  <!-- ================= HEADING ================= -->
 
-    <p class="uppercase tracking-[0.3em] text-cyan-300 text-sm mb-5">
+  <div class="max-w-7xl mx-auto text-center mb-24">
+
+    <p class="uppercase tracking-[0.3em] text-cyan-300 text-sm mb-6">
 
       Mobile experience
 
     </p>
 
-    <h2 class="section-heading max-w-5xl mx-auto">
+    <h2 class="section-heading max-w-4xl mx-auto leading-[1.05]">
 
       Designed like emotional quiet in your pocket.
 
@@ -23,11 +220,11 @@
 
   </div>
 
-  <!-- ================= SCROLL ================= -->
+  <!-- ================= PREVIEW SCROLL ================= -->
 
-  <div class="preview-scroll w-full overflow-x-auto py-10">
+  <div class="preview-scroll">
 
-    <div class="flex gap-12 px-10 w-max mx-auto items-start">
+    <div class="flex gap-16 px-20 w-max items-start">
 
       <!-- ===================================================== -->
       <!-- ================= SCREEN 1 ========================== -->
@@ -37,11 +234,11 @@
 
         <div class="phone-inner">
 
+          <!-- ================= TOP ================= -->
+
           <div>
 
-            <!-- ================= HEADER ================= -->
-
-            <div class="flex justify-between items-start mb-10">
+            <div class="flex justify-between items-start mb-12">
 
               <div>
 
@@ -51,7 +248,7 @@
 
                 </p>
 
-                <h3 class="text-[60px] font-semibold mt-2 leading-[0.92] tracking-[-2px]">
+                <h3 class="text-[52px] font-semibold mt-3 leading-[0.92] tracking-[-2px]">
 
                   How do you feel?
 
@@ -59,7 +256,7 @@
 
               </div>
 
-              <div class="logo-ring scale-75 mt-2">
+              <div class="logo-ring scale-75 mt-3">
 
                 <div class="logo-dot"></div>
 
@@ -71,25 +268,25 @@
 
             <div class="space-y-5">
 
-              <div class="phone-card text-[22px]">
+              <div class="phone-card text-[24px]">
 
                 Mentally tired
 
               </div>
 
-              <div class="phone-card text-[22px]">
+              <div class="phone-card text-[24px]">
 
                 Overthinking
 
               </div>
 
-              <div class="phone-card text-[22px]">
+              <div class="phone-card text-[24px]">
 
                 Emotionally heavy
 
               </div>
 
-              <div class="phone-card text-[22px]">
+              <div class="phone-card text-[24px]">
 
                 Burned out
 
@@ -101,7 +298,7 @@
 
           <!-- ================= BUTTON ================= -->
 
-          <div class="phone-button mt-10">
+          <div class="phone-button">
 
             Continue
 
@@ -119,11 +316,11 @@
 
         <div class="phone-inner">
 
+          <!-- ================= TOP ================= -->
+
           <div>
 
-            <!-- ================= HEADER ================= -->
-
-            <div class="flex justify-between items-start mb-10">
+            <div class="flex justify-between items-start mb-12">
 
               <div>
 
@@ -133,7 +330,7 @@
 
                 </p>
 
-                <h3 class="text-[60px] font-semibold mt-2 leading-[0.92] tracking-[-2px]">
+                <h3 class="text-[52px] font-semibold mt-3 leading-[0.92] tracking-[-2px]">
 
                   Emotional Reset
 
@@ -141,7 +338,7 @@
 
               </div>
 
-              <div class="logo-ring scale-75 mt-2">
+              <div class="logo-ring scale-75 mt-3">
 
                 <div class="logo-dot"></div>
 
@@ -153,15 +350,21 @@
 
             <div class="phone-card text-center">
 
-              <div class="w-32 h-32 rounded-full bg-gradient-to-br from-cyan-300/30 to-blue-400/20 mx-auto"></div>
+              <!-- ================= CIRCLE ================= -->
 
-              <h4 class="text-5xl font-semibold mt-10 leading-tight">
+              <div class="w-36 h-36 rounded-full bg-gradient-to-br from-cyan-300/30 to-blue-400/20 mx-auto"></div>
+
+              <!-- ================= TITLE ================= -->
+
+              <h4 class="text-[42px] font-semibold mt-10 leading-tight">
 
                 Releasing Mental Overload
 
               </h4>
 
-              <p class="text-gray-400 mt-6 text-xl leading-relaxed">
+              <!-- ================= DESCRIPTION ================= -->
+
+              <p class="text-gray-400 mt-7 text-[24px] leading-relaxed">
 
                 Slow breathing • Guided calm • Emotional decompression
 
@@ -181,7 +384,7 @@
 
           <!-- ================= BUTTON ================= -->
 
-          <div class="phone-button mt-10">
+          <div class="phone-button">
 
             Continue Session
 
@@ -199,11 +402,11 @@
 
         <div class="phone-inner">
 
+          <!-- ================= TOP ================= -->
+
           <div>
 
-            <!-- ================= HEADER ================= -->
-
-            <div class="flex justify-between items-start mb-10">
+            <div class="flex justify-between items-start mb-12">
 
               <div>
 
@@ -213,7 +416,7 @@
 
                 </p>
 
-                <h3 class="text-[60px] font-semibold mt-2 leading-[0.92] tracking-[-2px]">
+                <h3 class="text-[52px] font-semibold mt-3 leading-[0.92] tracking-[-2px]">
 
                   Emotional Clarity
 
@@ -221,7 +424,7 @@
 
               </div>
 
-              <div class="logo-ring scale-75 mt-2">
+              <div class="logo-ring scale-75 mt-3">
 
                 <div class="logo-dot"></div>
 
@@ -229,11 +432,11 @@
 
             </div>
 
-            <!-- ================= QUOTE CARD ================= -->
+            <!-- ================= QUOTE ================= -->
 
             <div class="phone-card bg-gradient-to-br from-[#182648] to-[#101827]">
 
-              <p class="text-[42px] leading-tight">
+              <p class="text-[32px] leading-snug">
 
                 “You are allowed to rest without earning it.”
 
@@ -287,7 +490,7 @@
 
           <!-- ================= BUTTON ================= -->
 
-          <div class="phone-button mt-10">
+          <div class="phone-button">
 
             Start Reflection
 
@@ -302,89 +505,3 @@
   </div>
 
 </section>
-
-<!-- ===================================================== -->
-<!-- ================= PHONE CSS FIX ===================== -->
-<!-- ===================================================== -->
-
-<style>
-
-  body {
-
-    margin: 0;
-
-    overflow-x: auto;
-
-  }
-
-  .phone {
-
-    width: 390px;
-
-    min-height: 720px;
-
-    border-radius: 42px;
-
-    padding: 16px;
-
-    background: rgba(255,255,255,0.04);
-
-    border: 1px solid rgba(255,255,255,0.08);
-
-    backdrop-filter: blur(20px);
-
-    box-shadow: 0 20px 60px rgba(0,0,0,0.45);
-
-    flex-shrink: 0;
-
-  }
-
-  .phone-inner {
-
-    min-height: 700px;
-
-    border-radius: 34px;
-
-    background: #0b1225;
-
-    padding: 32px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: space-between;
-
-  }
-
-  .phone-card {
-
-    border-radius: 28px;
-
-    padding: 24px;
-
-    background: rgba(255,255,255,0.05);
-
-    border: 1px solid rgba(255,255,255,0.06);
-
-  }
-
-  .phone-button {
-
-    background: white;
-
-    color: black;
-
-    border-radius: 20px;
-
-    padding: 20px;
-
-    text-align: center;
-
-    font-weight: 600;
-
-    font-size: 20px;
-
-  }
-
-</style>
