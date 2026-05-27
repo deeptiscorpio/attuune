@@ -1,18 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Attuune — Emotional Wellness</title>
 
+  <meta
+    name="description"
+    content="A calmer digital space for emotional reset, mental clarity, and emotionally safe modern living."
+  />
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="Attuune — Emotional Wellness" />
+  <meta
+    property="og:description"
+    content="For anyone carrying more than they show."
+  />
+  <meta property="og:image" content="logo-dark.png" />
+  <meta property="og:type" content="website" />
+
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Attuune — Emotional Wellness" />
+  <meta
+    name="twitter:description"
+    content="For anyone carrying more than they show."
+  />
+  <meta name="twitter:image" content="logo-dark.png" />
+
+  <!-- TAILWIND -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
 
   <style>
     body {
       margin: 0;
       background: #0b1020;
-      font-family: Inter, sans-serif;
+      font-family: 'Inter', sans-serif;
       overflow-x: hidden;
+      color: white;
     }
 
     .glow {
@@ -24,24 +63,9 @@
     }
 
     .glass {
-      background: rgba(255,255,255,0.05);
+      background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(20px);
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .fade-up {
-      animation: fadeUp 1s ease forwards;
-    }
-
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0px);
-      }
+      border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .hover-scale {
@@ -51,24 +75,32 @@
     .hover-scale:hover {
       transform: scale(1.03);
     }
+
+    a {
+      text-decoration: none;
+    }
   </style>
 </head>
 
-<body class="text-white">
+<body>
 
   <!-- NAVBAR -->
   <nav class="fixed top-0 left-0 w-full z-50 glass">
     <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
 
       <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-2xl bg-cyan-300 text-black flex items-center justify-center font-bold">
-          A
-        </div>
+
+        <img
+          src="logo-dark.png"
+          alt="Attuune Logo"
+          class="w-12 h-12 object-contain"
+        />
 
         <div>
           <h1 class="font-semibold text-lg">Attuune</h1>
           <p class="text-xs text-gray-400">Emotional wellness</p>
         </div>
+
       </div>
 
       <a
@@ -86,12 +118,13 @@
   <section class="relative min-h-screen flex items-center px-6 pt-32 overflow-hidden">
 
     <div class="glow bg-cyan-400 w-[500px] h-[500px] top-[-100px] left-[-100px]"></div>
+
     <div class="glow bg-blue-500 w-[500px] h-[500px] bottom-[-100px] right-[-100px]"></div>
 
     <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center relative z-10">
 
       <!-- LEFT -->
-      <div class="fade-up">
+      <div>
 
         <div class="inline-flex px-4 py-2 rounded-full glass text-sm text-gray-300 mb-6">
           Emotional wellness for modern life
@@ -118,9 +151,12 @@
             Join Early Access
           </a>
 
-          <button class="glass px-8 py-4 rounded-2xl hover-scale">
+          <a
+            href="#preview"
+            class="glass px-8 py-4 rounded-2xl hover-scale"
+          >
             Watch Preview
-          </button>
+          </a>
 
         </div>
 
@@ -132,8 +168,8 @@
 
       </div>
 
-      <!-- RIGHT -->
-      <div class="relative fade-up">
+      <!-- RIGHT CARD -->
+      <div class="relative">
 
         <div class="glass rounded-[36px] p-6 shadow-2xl">
 
@@ -145,14 +181,17 @@
 
                 <div>
                   <p class="text-sm text-gray-400">Tonight</p>
+
                   <h3 class="text-2xl font-semibold mt-1">
                     Emotional Reset
                   </h3>
                 </div>
 
-                <div class="w-12 h-12 rounded-2xl bg-cyan-300 text-black flex items-center justify-center font-bold">
-                  A
-                </div>
+                <img
+                  src="logo-dark.png"
+                  alt="Attuune Logo"
+                  class="w-12 h-12 object-contain"
+                />
 
               </div>
 
@@ -210,45 +249,33 @@
     <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 mt-20">
 
       <div class="glass rounded-[32px] p-8 hover-scale">
+
         <div class="text-5xl text-cyan-300/40 mb-6">“</div>
 
         <p class="text-xl leading-relaxed text-gray-200">
           This feels calmer than social media and less overwhelming than therapy apps.
         </p>
 
-        <div class="mt-10 pt-6 border-t border-white/10">
-          <p class="text-sm uppercase tracking-[0.2em] text-gray-400">
-            Early User
-          </p>
-        </div>
       </div>
 
       <div class="glass rounded-[32px] p-8 hover-scale">
+
         <div class="text-5xl text-cyan-300/40 mb-6">“</div>
 
         <p class="text-xl leading-relaxed text-gray-200">
           The first app that made me slow down instead of pushing me to do more.
         </p>
 
-        <div class="mt-10 pt-6 border-t border-white/10">
-          <p class="text-sm uppercase tracking-[0.2em] text-gray-400">
-            Beta Member
-          </p>
-        </div>
       </div>
 
       <div class="glass rounded-[32px] p-8 hover-scale">
+
         <div class="text-5xl text-cyan-300/40 mb-6">“</div>
 
         <p class="text-xl leading-relaxed text-gray-200">
           It feels like emotional quiet in the middle of a loud world.
         </p>
 
-        <div class="mt-10 pt-6 border-t border-white/10">
-          <p class="text-sm uppercase tracking-[0.2em] text-gray-400">
-            Waitlist User
-          </p>
-        </div>
       </div>
 
     </div>
@@ -259,8 +286,6 @@
   <section class="px-6 pb-24">
 
     <div class="max-w-5xl mx-auto glass rounded-[40px] p-12 md:p-20 text-center relative overflow-hidden">
-
-      <div class="glow bg-blue-500 w-[400px] h-[400px] top-[-100px] left-1/2 -translate-x-1/2"></div>
 
       <div class="relative z-10">
 
