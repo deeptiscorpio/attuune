@@ -1,397 +1,295 @@
-import { motion } from 'framer-motion'
-import { Moon, Waves, Heart, Sparkles } from 'lucide-react'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attuune — Emotional Wellness</title>
 
-export default function LandingPage() {
-  const testimonials = [
-    {
-      quote: 'This feels calmer than social media and less overwhelming than therapy apps.',
-      role: 'Early User'
-    },
-    {
-      quote: 'The first app that made me slow down instead of pushing me to do more.',
-      role: 'Beta Member'
-    },
-    {
-      quote: 'It feels like emotional quiet in the middle of a loud world.',
-      role: 'Waitlist User'
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      margin: 0;
+      background: #0b1020;
+      font-family: Inter, sans-serif;
+      overflow-x: hidden;
     }
-  ]
 
-  const emotions = [
-    'Mentally tired',
-    'Overthinking',
-    'Emotionally heavy',
-    'Burned out'
-  ]
+    .glow {
+      position: absolute;
+      border-radius: 9999px;
+      filter: blur(120px);
+      opacity: 0.25;
+      z-index: 0;
+    }
 
-  
-  return (
-    <div className="min-h-screen bg-[#0b1020] text-white overflow-x-hidden font-sans selection:bg-[#9fd3ff] selection:text-black">
-      {/* NAVBAR */}
-      <nav className="sticky top-0 z-50 border-b border-white/5 bg-[#0b1020]/70 backdrop-blur-2xl">
-        <div className="max-w-7xl mx-auto px-6 md:px-16 py-5 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-[#9fd3ff] text-black flex items-center justify-center font-bold">
-              A
-            </div>
+    .glass {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .fade-up {
+      animation: fadeUp 1s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+
+    .hover-scale {
+      transition: all 0.3s ease;
+    }
+
+    .hover-scale:hover {
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+
+<body class="text-white">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-0 left-0 w-full z-50 glass">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-2xl bg-cyan-300 text-black flex items-center justify-center font-bold">
+          A
+        </div>
+
+        <div>
+          <h1 class="font-semibold text-lg">Attuune</h1>
+          <p class="text-xs text-gray-400">Emotional wellness</p>
+        </div>
+      </div>
+
+      <a
+        href="https://tally.so/r/kdkNDo"
+        target="_blank"
+        class="bg-white text-black px-5 py-3 rounded-2xl font-semibold hover-scale"
+      >
+        Join Waitlist
+      </a>
+
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center px-6 pt-32 overflow-hidden">
+
+    <div class="glow bg-cyan-400 w-[500px] h-[500px] top-[-100px] left-[-100px]"></div>
+    <div class="glow bg-blue-500 w-[500px] h-[500px] bottom-[-100px] right-[-100px]"></div>
+
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center relative z-10">
+
+      <!-- LEFT -->
+      <div class="fade-up">
+
+        <div class="inline-flex px-4 py-2 rounded-full glass text-sm text-gray-300 mb-6">
+          Emotional wellness for modern life
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+          The world got
+          <span class="text-cyan-300 block">louder.</span>
+          Your mind didn’t.
+        </h1>
+
+        <p class="mt-8 text-xl text-gray-300 leading-relaxed max-w-xl">
+          A calm digital space to emotionally reset, clear your thoughts,
+          and feel mentally lighter — without pressure, noise, or emotional overwhelm.
+        </p>
+
+        <div class="flex flex-wrap gap-4 mt-10">
+
+          <a
+            href="https://tally.so/r/kdkNDo"
+            target="_blank"
+            class="bg-white text-black px-8 py-4 rounded-2xl font-semibold hover-scale"
+          >
+            Join Early Access
+          </a>
+
+          <button class="glass px-8 py-4 rounded-2xl hover-scale">
+            Watch Preview
+          </button>
+
+        </div>
+
+        <div class="flex flex-wrap gap-6 mt-10 text-gray-400 text-sm">
+          <div>✓ No toxic positivity</div>
+          <div>✓ Emotionally safe</div>
+          <div>✓ Designed for real life</div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="relative fade-up">
+
+        <div class="glass rounded-[36px] p-6 shadow-2xl">
+
+          <div class="bg-[#131b31] rounded-[28px] p-6 min-h-[580px] flex flex-col justify-between">
 
             <div>
-              <p className="font-semibold text-lg">Attuune</p>
-              <p className="text-xs text-gray-400">Emotional wellness</p>
-            </div>
-          </div>
 
-          <div className="hidden md:flex items-center gap-8 text-sm text-gray-300">
-            <a href="#experience" className="hover:text-white transition-colors">
-              Experience
-            </a>
-            <a href="#mobile" className="hover:text-white transition-colors">
-              App Preview
-            </a>
-            <a href="#waitlist" className="hover:text-white transition-colors">
-              Join Waitlist
-            </a>
-          </div>
+              <div class="flex justify-between items-center mb-10">
 
-          <button className="bg-white text-black px-5 py-3 rounded-2xl text-sm font-semibold hover:scale-105 transition-all duration-300">
-            Early Access
-          </button>
-        </div>
-      </nav>
-
-      {/* HERO */}
-      <section className="relative px-6 md:px-16 pt-16 pb-24 overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/20 blur-3xl rounded-full animate-pulse" />
-          <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-cyan-400/10 blur-3xl rounded-full animate-pulse" />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur mb-6 text-sm text-gray-300">
-              Emotional wellness for modern life
-            </div>
-
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight tracking-tight">
-              The world got
-              <span className="block text-[#9fd3ff]"> louder.</span>
-              Your mind didn’t.
-            </h1>
-
-            <p className="mt-8 text-lg md:text-xl text-gray-300 max-w-xl leading-relaxed">
-              A calm digital space to emotionally reset, clear your thoughts,
-              and feel mentally lighter — without pressure, noise, or emotional overwhelm.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 mt-10">
-              <button className="bg-white text-black px-8 py-4 rounded-2xl text-lg font-semibold hover:scale-105 transition-all duration-300">
-                Join Early Access
-              </button>
-
-              <button className="border border-white/15 bg-white/5 px-8 py-4 rounded-2xl text-lg hover:bg-white/10 transition-all duration-300">
-                Watch Preview
-              </button>
-            </div>
-
-            <div className="mt-12 flex flex-wrap gap-6 text-sm text-gray-400">
-              <div>✓ No toxic positivity</div>
-              <div>✓ Emotionally safe</div>
-              <div>✓ Designed for real life</div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.92 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.9 }}
-            className="relative"
-          >
-            <div className="absolute -top-10 -left-10 w-72 h-72 bg-blue-500/20 blur-3xl rounded-full" />
-
-            <div className="relative bg-white/5 border border-white/10 rounded-[36px] p-6 shadow-2xl backdrop-blur-2xl">
-              <div className="rounded-[28px] bg-[#131b31] p-6 min-h-[580px] flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center justify-between mb-10">
-                    <div>
-                      <p className="text-sm text-gray-400">Tonight</p>
-                      <h3 className="text-2xl font-semibold mt-1">
-                        Emotional Reset
-                      </h3>
-                    </div>
-
-                    <div className="w-12 h-12 rounded-2xl bg-[#9fd3ff] text-black flex items-center justify-center">
-                      <Moon size={22} />
-                    </div>
-                  </div>
-
-                  <div className="space-y-4">
-                    <div className="rounded-2xl bg-white/5 border border-white/5 p-5">
-                      <p className="text-sm text-gray-400 mb-2">Reflection</p>
-                      <p className="text-lg leading-relaxed text-gray-100">
-                        “You don’t need to solve everything tonight.”
-                      </p>
-                    </div>
-
-                    <div className="rounded-2xl bg-gradient-to-r from-[#1b2a4d] to-[#152038] p-5 border border-white/5">
-                      <p className="text-sm text-gray-400 mb-2">Guided Calm</p>
-                      <p className="text-lg leading-relaxed text-gray-100">
-                        Breathe slowly. Let your nervous system soften.
-                      </p>
-                    </div>
-                  </div>
+                  <p class="text-sm text-gray-400">Tonight</p>
+                  <h3 class="text-2xl font-semibold mt-1">
+                    Emotional Reset
+                  </h3>
                 </div>
 
-                <button className="mt-8 bg-white text-black py-4 rounded-2xl text-lg font-semibold hover:scale-[1.02] transition-all duration-300">
-                  Start Your Reset
-                </button>
+                <div class="w-12 h-12 rounded-2xl bg-cyan-300 text-black flex items-center justify-center font-bold">
+                  A
+                </div>
+
               </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
-      {/* TESTIMONIALS */}
-      <section id="experience" className="px-6 md:px-16 py-24">
-        <div className="max-w-6xl mx-auto text-center mb-20">
-          <p className="text-[#9fd3ff] uppercase tracking-[0.3em] text-sm mb-5">
-            Emotional reactions
-          </p>
+              <div class="space-y-4">
 
-          <h2 className="text-4xl md:text-6xl font-bold leading-tight max-w-4xl mx-auto">
-            Designed to feel emotionally lighter.
-          </h2>
-        </div>
+                <div class="glass rounded-2xl p-5">
+                  <p class="text-sm text-gray-400 mb-2">Reflection</p>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-          {testimonials.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white/5 border border-white/10 rounded-[32px] p-8 backdrop-blur-xl"
-            >
-              <div className="text-5xl text-[#9fd3ff]/40 mb-6">“</div>
-
-              <p className="text-xl leading-relaxed text-gray-200 min-h-[160px]">
-                {item.quote}
-              </p>
-
-              <div className="mt-10 pt-6 border-t border-white/10">
-                <p className="text-sm uppercase tracking-[0.2em] text-gray-400">
-                  {item.role}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
-      {/* MOBILE APP PREVIEW */}
-      <section id="mobile" className="px-6 md:px-16 py-28 overflow-hidden">
-        <div className="max-w-7xl mx-auto text-center mb-20">
-          <p className="text-[#9fd3ff] uppercase tracking-[0.3em] text-sm mb-5">
-            Mobile experience
-          </p>
-
-          <h2 className="text-4xl md:text-6xl font-bold leading-tight max-w-4xl mx-auto">
-            Designed like emotional quiet in your pocket.
-          </h2>
-        </div>
-
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-10 items-center">
-          {/* SCREEN 1 */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-            className="relative mx-auto"
-          >
-            <div className="absolute inset-0 bg-[#9fd3ff]/10 blur-3xl rounded-full" />
-
-            <div className="relative w-[320px] rounded-[42px] border border-white/10 bg-[#111827] p-4 shadow-2xl backdrop-blur-2xl">
-              <div className="rounded-[34px] bg-[#0b1020] min-h-[640px] p-6 flex flex-col">
-                <div className="flex items-center justify-between mb-10">
-                  <div>
-                    <p className="text-sm text-gray-400">Good Evening</p>
-                    <h3 className="text-2xl font-semibold mt-1">
-                      How do you feel?
-                    </h3>
-                  </div>
-
-                  <div className="w-12 h-12 rounded-2xl bg-[#9fd3ff] text-black flex items-center justify-center">
-                    <Heart size={22} />
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  {emotions.map((emotion, index) => (
-                    <button
-                      key={index}
-                      className="w-full text-left px-5 py-5 rounded-2xl bg-white/5 border border-white/10 hover:border-[#9fd3ff]/30 transition-all"
-                    >
-                      <span className="text-lg">{emotion}</span>
-                    </button>
-                  ))}
-                </div>
-
-                <div className="mt-auto pt-8">
-                  <button className="w-full bg-white text-black py-4 rounded-2xl font-semibold text-lg">
-                    Continue
-                  </button>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* SCREEN 2 */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="relative mx-auto lg:-mt-16"
-          >
-            <div className="absolute inset-0 bg-cyan-400/10 blur-3xl rounded-full" />
-
-            <div className="relative w-[320px] rounded-[42px] border border-white/10 bg-[#111827] p-4 shadow-2xl backdrop-blur-2xl">
-              <div className="rounded-[34px] bg-[#0b1020] min-h-[640px] p-6 flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-8">
-                    <div>
-                      <p className="text-sm text-gray-400">Tonight’s Session</p>
-                      <h3 className="text-2xl font-semibold mt-1">
-                        Emotional Reset
-                      </h3>
-                    </div>
-
-                    <div className="w-12 h-12 rounded-2xl bg-[#9fd3ff] text-black flex items-center justify-center">
-                      <Waves size={22} />
-                    </div>
-                  </div>
-
-                  <div className="bg-white/5 border border-white/10 rounded-3xl p-6">
-                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#9fd3ff]/30 to-cyan-400/20 mx-auto flex items-center justify-center">
-                      <div className="w-16 h-16 rounded-full bg-white/10" />
-                    </div>
-
-                    <h4 className="text-2xl font-semibold text-center mt-8 leading-snug">
-                      Releasing Mental Overload
-                    </h4>
-
-                    <p className="text-center text-gray-400 mt-4 leading-relaxed">
-                      Slow breathing • Guided calm • Emotional decompression
-                    </p>
-                  </div>
-                </div>
-
-                <button className="w-full bg-white text-black py-4 rounded-2xl font-semibold text-lg mt-8">
-                  Continue Session
-                </button>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* SCREEN 3 */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="relative mx-auto"
-          >
-            <div className="absolute inset-0 bg-purple-400/10 blur-3xl rounded-full" />
-
-            <div className="relative w-[320px] rounded-[42px] border border-white/10 bg-[#111827] p-4 shadow-2xl backdrop-blur-2xl">
-              <div className="rounded-[34px] bg-[#0b1020] min-h-[640px] p-6 flex flex-col">
-                <div className="flex items-center justify-between mb-10">
-                  <div>
-                    <p className="text-sm text-gray-400">Your Space</p>
-                    <h3 className="text-2xl font-semibold mt-1">
-                      Emotional Clarity
-                    </h3>
-                  </div>
-
-                  <div className="w-12 h-12 rounded-2xl bg-[#9fd3ff] text-black flex items-center justify-center">
-                    <Sparkles size={22} />
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-br from-[#151f38] to-[#0f172a] rounded-3xl p-6 border border-white/10">
-                  <Heart className="text-[#9fd3ff] mb-5" size={28} />
-
-                  <p className="text-xl leading-relaxed text-gray-100">
-                    “You are allowed to rest without earning it.”
+                  <p class="text-lg leading-relaxed text-gray-100">
+                    “You don’t need to solve everything tonight.”
                   </p>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4 mt-6">
-                  <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
-                    <p className="text-sm text-gray-400 mb-2">Mood</p>
-                    <p className="text-2xl font-medium">Calmer</p>
-                  </div>
+                <div class="rounded-2xl p-5 bg-gradient-to-r from-[#1b2a4d] to-[#152038]">
+                  <p class="text-sm text-gray-400 mb-2">Guided Calm</p>
 
-                  <div className="bg-white/5 border border-white/10 rounded-2xl p-5">
-                    <p className="text-sm text-gray-400 mb-2">Energy</p>
-                    <p className="text-2xl font-medium">Lighter</p>
-                  </div>
+                  <p class="text-lg leading-relaxed text-gray-100">
+                    Breathe slowly. Let your nervous system soften.
+                  </p>
                 </div>
 
-                <div className="mt-auto pt-8">
-                  <button className="w-full bg-white text-black py-4 rounded-2xl font-semibold text-lg">
-                    Start Reflection
-                  </button>
-                </div>
               </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
-      {/* FINAL CTA */}
-      <section id="waitlist" className="px-6 md:px-16 pb-24">
-        <div className="max-w-6xl mx-auto rounded-[40px] border border-white/10 bg-white/5 backdrop-blur-xl p-12 md:p-20 text-center relative overflow-hidden">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-blue-500/10 blur-3xl rounded-full" />
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="relative z-10"
-          >
-            <h2 className="text-4xl md:text-6xl font-bold leading-tight max-w-4xl mx-auto">
-              Your mind deserves a softer place to land.
-            </h2>
-
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto mt-8 leading-relaxed">
-              Join the waitlist and be among the first to experience a calmer,
-              emotionally lighter digital space.
-            </p>
-
-            <div className="mt-10 flex justify-center">
-              <a
-                href="https://tally.so/r/kdkNDo"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-white text-black px-8 py-4 rounded-2xl font-semibold hover:scale-105 transition-all duration-300"
-              >
-                Join The Waitlist
-              </a>
             </div>
 
-            <p className="text-sm text-gray-400 mt-6">
-              Takes less than 30 seconds.
-            </p>
-          </motion.div>
+            <button class="mt-8 bg-white text-black py-4 rounded-2xl text-lg font-semibold hover-scale">
+              Start Your Reset
+            </button>
+
+          </div>
+
         </div>
-      </section>
+
+      </div>
+
     </div>
-  )
-}
+
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="px-6 py-24">
+
+    <div class="max-w-6xl mx-auto text-center">
+
+      <p class="uppercase tracking-[0.3em] text-cyan-300 text-sm mb-5">
+        Emotional reactions
+      </p>
+
+      <h2 class="text-4xl md:text-6xl font-bold leading-tight">
+        Designed to feel emotionally lighter.
+      </h2>
+
+    </div>
+
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 mt-20">
+
+      <div class="glass rounded-[32px] p-8 hover-scale">
+        <div class="text-5xl text-cyan-300/40 mb-6">“</div>
+
+        <p class="text-xl leading-relaxed text-gray-200">
+          This feels calmer than social media and less overwhelming than therapy apps.
+        </p>
+
+        <div class="mt-10 pt-6 border-t border-white/10">
+          <p class="text-sm uppercase tracking-[0.2em] text-gray-400">
+            Early User
+          </p>
+        </div>
+      </div>
+
+      <div class="glass rounded-[32px] p-8 hover-scale">
+        <div class="text-5xl text-cyan-300/40 mb-6">“</div>
+
+        <p class="text-xl leading-relaxed text-gray-200">
+          The first app that made me slow down instead of pushing me to do more.
+        </p>
+
+        <div class="mt-10 pt-6 border-t border-white/10">
+          <p class="text-sm uppercase tracking-[0.2em] text-gray-400">
+            Beta Member
+          </p>
+        </div>
+      </div>
+
+      <div class="glass rounded-[32px] p-8 hover-scale">
+        <div class="text-5xl text-cyan-300/40 mb-6">“</div>
+
+        <p class="text-xl leading-relaxed text-gray-200">
+          It feels like emotional quiet in the middle of a loud world.
+        </p>
+
+        <div class="mt-10 pt-6 border-t border-white/10">
+          <p class="text-sm uppercase tracking-[0.2em] text-gray-400">
+            Waitlist User
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="px-6 pb-24">
+
+    <div class="max-w-5xl mx-auto glass rounded-[40px] p-12 md:p-20 text-center relative overflow-hidden">
+
+      <div class="glow bg-blue-500 w-[400px] h-[400px] top-[-100px] left-1/2 -translate-x-1/2"></div>
+
+      <div class="relative z-10">
+
+        <h2 class="text-4xl md:text-6xl font-bold leading-tight">
+          Your mind deserves a softer place to land.
+        </h2>
+
+        <p class="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto mt-8">
+          Join the waitlist and be among the first to experience a calmer,
+          emotionally lighter digital space.
+        </p>
+
+        <a
+          href="https://tally.so/r/kdkNDo"
+          target="_blank"
+          class="inline-flex items-center justify-center bg-white text-black px-8 py-4 rounded-2xl font-semibold hover-scale mt-10"
+        >
+          Join The Waitlist
+        </a>
+
+        <p class="text-sm text-gray-400 mt-6">
+          Takes less than 30 seconds.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</body>
+</html>
